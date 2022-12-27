@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://force-roleplay.ml/panel/index -->
+<html lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./index_files/output.css">
+<link rel="shortcut icon" href="https://force-roleplay.ml/src/img/favicon.ico" type="image/x-icon">
+<title>NTeam UCP</title>
+</head>
+<body class="bg-nUcpBack">
+<div>
+<nav class="fixed z-30 w-full border-b bg-nCardColor border-nBackground">
+<input type="hidden" id="inputNotifikacije" value="WL je trenutno zatvorena, možete kupiti vanrednu"><div id="obavijest" class="items-center justify-center w-full h-8 text-xs sm:text-lg flex" style=" 
+                    background-color: rgb(59 130 246);
+                ">
+<p class="font-bold text-white font-poppins">WL je trenutno zatvorena, možete kupiti vanrednu <a class="underline cursor-pointer" href="https://force-roleplay.ml/panel/shop">ovdje</a>.</p>
+<svg xmlns="http://www.w3.org/2000/svg" id="hideNotification" class="w-6 h-6 ml-2 text-white cursor-pointer sm:ml-4" fill="#fff" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</div> <div class="px-3 py-3 lg:px-5 lg:pl-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center justify-start">
+<button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-white hover:bg-nUcpBack focus:bg-nUcpBack focus:ring-2 focus:ring-nUcpBack">
+<svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+</svg>
+<svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<a href="https://force-roleplay.ml/panel/index" class="text-xl font-bold flex items-center lg:ml-2.5">
+<img src="./index_files/navlogo.png" loading="lazy" class="h-12 mr-2" alt="NTeam Logo">
+</a>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="hidden lg:block lg:pl-32">
+<label for="topbar-search" class="sr-only">Pretraga</label>
+<div class="relative mt-1 lg:w-64">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="topbar-search" class="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-xl focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</div>
+<div class="flex items-center">
+<button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden">
+<span class="sr-only">Pretraga</span>
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<user>
+<a data-target="#account" class="cursor-pointer hidden bg-nUcpBack md:text-lg rounded-3xl sm:inline-flex ml-0 text-white text-[15px] sm:px-[0.55rem] md:px-5 py-2.5 text-center items-center mr-3">
+<span class="font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold" id="balans">&nbsp;
+0 €</span>
+</a>
+</user>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 overflow-hidden bg-nCardColor" id="sidebar1">
+<aside id="sidebar" class="fixed top-0 left-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 duration-75 lg:flex transition-width" aria-label="Sidebar">
+<div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-nCardColor">
+<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" id="sidebar1">
+<div class="flex-1 px-3 pt-8 bg-nCardColor" id="sidebarElement">
+<ul class="pb-2 space-y-2">
+<li>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="lg:hidden">
+<label for="mobile-search" class="sr-only">Pretraga</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+</path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="mobile-search" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-xl focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/profile" class="inline-flex items-center mt-4 mb-4 ml-6 font-bold text-center text-white text-md">
+<img class="object-cover w-10 h-10 mr-4 rounded-full" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" src="./index_files/4b2be944217e7678038b60e20438dee4.jpg" alt="Profile image">Supreme1337</a>
+</li>
+<li>
+<a data-target="#account" class="cursor-pointer bg-nUcpBack rounded-3xl ml-4 mb-4 text-white px-2 text-md py-2.5 text-center items-center mr-3 sm:hidden">
+<span class="font-xs sm:font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold">&nbsp;
+0 $</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/index" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+</svg>
+<span class="ml-3 font-bold">Početna</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/users" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 18 18">
+<path fill-rule="evenodd" d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-2 font-bold whitespace-nowrap">Lista korisnika</span>
+</a>
+</li>
+ <li>
+<a href="https://force-roleplay.ml/panel/shop" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Kupovina</span>
+<span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-white bg-red-500 rounded-full">Shop</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/topdonators" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Top Donatori</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/whitelist" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Whitelist</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/actions/Auth/Logout?logout" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Odjava</span>
+</a>
+</li>
+</ul>
+ </div>
+</div>
+</div>
+</aside>
+<div id="main-content" class="relative w-full h-full overflow-y-auto bg-nUcpBack lg:ml-64">
+<main>
+<div class="px-4 pt-12" id="mainTebra">
+<div class="grid w-full grid-cols-1 gap-4 mt-4 md:grid-cols-2 xl:grid-cols-3">
+<div class="p-4 rounded-lg shadow bg-nCardColor sm:p-6 xl:p-8">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<svg xmlns="http://www.w3.org/2000/svg" class="inline-flex w-10 h-10 text-2xl fas fa-users text-nPeriwinkle" viewBox="0 0 20 20" fill="currentColor">
+<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+</svg>
+<span class="text-2xl font-bold leading-none text-white sm:text-3xl">
+1731 </span>
+<h3 class="text-base font-normal text-gray-500">Registrovanih igrača</h3>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg shadow bg-nCardColor sm:p-6 xl:p-8">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<svg xmlns="http://www.w3.org/2000/svg" class="inline-flex w-10 h-10 text-2xl fas fa-users text-nPeriwinkle" viewBox="0 0 20 20" fill="currentColor">
+<path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z"></path>
+</svg>
+<span class="text-2xl font-bold leading-none text-white sm:text-3xl">
+260 </span>
+<h3 class="text-base font-normal text-gray-500">Whitelistovanih igrača</h3>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-lg shadow bg-nCardColor sm:p-6 xl:p-8">
+<div class="flex items-center">
+<div class="flex-shrink-0">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex w-10 h-10 text-2xl bi bi-person-check-fill text-nPeriwinkle" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"></path>
+<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+</svg>
+<span class="text-2xl font-bold leading-none text-white sm:text-3xl">
+276 </span>
+<h3 class="text-base font-normal text-gray-500">Ukupno karaktera</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 my-4 md:grid-cols-2">
+<div class="h-full p-4 mb-4 rounded-lg shadow bg-nCardColor sm:p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold leading-none text-white"><span class="text-2xl text-nPeriwinkle">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="inline-flex bi bi-hourglass-split" viewBox="0 0 16 16">
+<path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"></path>
+</svg>
+TOP
+5
+|</span>
+Najaktiviniji igrači u prošlom mjesecu
+</h3>
+</div>
+<div class="flow-root">
+<ul role="list" class="divide-y divide-nteam">
+<li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/86d32170a49c184fa1b2a7bedc6e6543.jpg" alt="Profile image">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Civic Aladin</p> <p class="text-sm text-gray-500 truncate">
+Broj sati
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">405.45 h </div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/a9fdf43709d8373e4d8cd42ea40475ab.jpg" alt="Profile image">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Nedim Lepić</p> <p class="text-sm text-gray-500 truncate">
+Broj sati
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">158.62 h </div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/9c2406f7b2190a50251f48d89c8d284c.jpg" alt="Profile image">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Ewony Dev</p> <p class="text-sm text-gray-500 truncate">
+Broj sati
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">117.88 h </div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/7f3e28ca7e53661f7f382e948e6ac796.jpg" alt="Profile image">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Nikola Madzarevic</p> <p class="text-sm text-gray-500 truncate">
+Broj sati
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">105.33 h </div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/91a8ffe2c02c6314ed885645d04b9a81.jpg" alt="Profile image">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Emrah Devic</p> <p class="text-sm text-gray-500 truncate">
+Broj sati
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">105.01 h </div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="h-full p-4 mb-4 rounded-lg shadow bg-nCardColor sm:p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-bold leading-none text-white"><span class="text-2xl text-nPeriwinkle">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+<path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"></path>
+</svg>
+TOP
+5
+|</span>
+Najpopularniji poslovi
+</h3>
+</div>
+<div class="flow-root">
+<ul role="list" class="divide-y divide-nteam">
+<li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" loading="lazy" src="./index_files/gardener.png" alt="Vrtlar ikona">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Vrtlar</p>
+<p class="text-sm text-gray-500 truncate">
+Zaposlenih
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">29</div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" loading="lazy" src="./index_files/cleaner.png" alt="Čistač ikona">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Čistač</p>
+<p class="text-sm text-gray-500 truncate">
+Zaposlenih
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">24</div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" loading="lazy" src="./index_files/police.png" alt="Policija ikona">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Policija</p>
+<p class="text-sm text-gray-500 truncate">
+Zaposlenih
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">20</div>
+ </div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" loading="lazy" src="./index_files/oil.png" alt="Rafinerija ikona">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Rafinerija</p>
+<p class="text-sm text-gray-500 truncate">
+Zaposlenih
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">15</div>
+</div>
+</li><li class="py-3 sm:py-4">
+<div class="flex items-center space-x-4">
+<div class="flex-shrink-0">
+<img class="w-8 h-8 rounded-full" loading="lazy" src="./index_files/taxi.png" alt="Taxi ikona">
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-medium text-white truncate">Taxi</p>
+<p class="text-sm text-gray-500 truncate">
+Zaposlenih
+</p>
+</div>
+<div class="inline-flex items-center text-base font-semibold text-white">13</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 grid-rows-0 p-4 rounded-lg bg-nCardColor sm:gap-4 sm:grid-cols-2 sm:grid-rows-1 xl:grid-rows-1 xl:grid-cols-4">
+<div class="sm:pb-4">
+<h3 class="pb-4 text-xl font-bold leading-none text-white"><span class="text-2xl text-nPeriwinkle">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-instagram" viewBox="0 0 16 16">
+<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+</svg>
+ZADNJA 4
+|</span>
+Instagram posta
+</h3>
+<div class="w-full border rounded-lg bg-nCardColor border-nBackground sm:max-w-md">
+<div class="flex items-center px-4 py-3">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/screenshot.jpg">
+<div class="ml-3 ">
+<span class="block text-sm antialiased font-semibold leading-tight text-white">Roberto_Corleone</span>
+<span class="block text-xs text-gray-600">No Location</span>
+</div>
+</div>
+<img src="./index_files/screenshot(1).jpg" loading="lazy" width="900" height="900">
+<div class="flex items-center justify-between mx-4 mt-3 mb-2">
+<div class="flex gap-5">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+</path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+ <path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+</path>
+</svg>
+</div>
+<div class="flex">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+</path>
+</svg>
+</div>
+</div>
+<div class="mx-4 mt-2 mb-4 text-sm font-semibold text-white">@Roberto_Corleone Sportski tipovi</div>
+</div>
+</div>
+
+<div class="sm:pb-4">
+<h3 class="text-xl font-bold leading-none text-nCardColor sm:pb-4 noselect"><span class="text-2xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-instagram" viewBox="0 0 16 16">
+<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+</svg>
+ZADNJA 4
+|</span>
+Instagram posta
+</h3>
+<div class="max-w-md border rounded-lg bg-nCardColor border-nBackground">
+<div class="flex items-center px-4 py-3">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/screenshot(2).jpg">
+<div class="ml-3 ">
+<span class="block text-sm antialiased font-semibold leading-tight text-white">Arthur</span>
+<span class="block text-xs text-gray-600">No Sharing</span>
+</div>
+</div>
+<img src="./index_files/screenshot(2).jpg" loading="lazy" width="900" height="900">
+<div class="flex items-center justify-between mx-4 mt-3 mb-2">
+<div class="flex gap-5">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+</path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+</path>
+</svg>
+</div>
+<div class="flex">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+</path>
+</svg>
+</div>
+</div>
+<div class="mx-4 mt-2 mb-4 text-sm font-semibold text-white">@Arthur STIGLA BRACA TRAORE :d</div>
+</div>
+</div>
+<div class="sm:pb-4">
+<h3 class="text-xl font-bold leading-none text-nCardColor sm:pb-4 noselect"><span class="text-2xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-instagram" viewBox="0 0 16 16">
+<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+</svg>
+ZADNJA 4
+|</span>
+Instagram posta
+</h3>
+<div class="max-w-md border rounded-lg bg-nCardColor border-nBackground">
+<div class="flex items-center px-4 py-3">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/screenshot(3).jpg">
+<div class="ml-3 ">
+<span class="block text-sm antialiased font-semibold leading-tight text-white">K.@.R.L F.@.I.R.B.U.R.N.E</span>
+<span class="block text-xs text-gray-600">No Location</span>
+</div>
+</div>
+<img src="./index_files/screenshot(3).jpg" loading="lazy" width="900" height="900">
+<div class="flex items-center justify-between mx-4 mt-3 mb-2">
+<div class="flex gap-5">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+</path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+</path>
+</svg>
+</div>
+<div class="flex">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+</path>
+</svg>
+</div>
+</div>
+<div class="mx-4 mt-2 mb-4 text-sm font-semibold text-white">@K.@.R.L F.@.I.R.B.U.R.N.E </div>
+</div>
+</div> 
+<div class="sm:pb-4">
+<h3 class="text-xl font-bold leading-none text-nCardColor sm:pb-4 noselect"><span class="text-2xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-instagram" viewBox="0 0 16 16">
+<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+</svg>
+ZADNJA 4
+|</span>
+Instagram posta
+</h3>
+<div class="max-w-md border rounded-lg bg-nCardColor border-nBackground">
+<div class="flex items-center px-4 py-3">
+<img class="object-cover w-8 h-8 rounded-full" loading="lazy" src="./index_files/screenshot(4).jpg">
+<div class="ml-3 ">
+<span class="block text-sm antialiased font-semibold leading-tight text-white">vladimirivanov</span>
+<span class="block text-xs text-gray-600">No Location</span>
+</div>
+</div>
+<img src="./index_files/screenshot(4).jpg" loading="lazy" width="900" height="900">
+<div class="flex items-center justify-between mx-4 mt-3 mb-2">
+<div class="flex gap-5">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+</path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path clip-rule="evenodd" d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z" fill-rule="evenodd"></path>
+</svg>
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+</path>
+</svg>
+</div>
+<div class="flex">
+<svg fill="#fff" height="24" viewBox="0 0 48 48" width="24" class="cursor-pointer">
+<path d="M43.5 48c-.4 0-.8-.2-1.1-.4L24 29 5.6 47.6c-.4.4-1.1.6-1.6.3-.6-.2-1-.8-1-1.4v-45C3 .7 3.7 0 4.5 0h39c.8 0 1.5.7 1.5 1.5v45c0 .6-.4 1.2-.9 1.4-.2.1-.4.1-.6.1zM24 26c.8 0 1.6.3 2.2.9l15.8 16V3H6v39.9l15.8-16c.6-.6 1.4-.9 2.2-.9z">
+</path>
+</svg>
+</div>
+</div>
+<div class="mx-4 mt-2 mb-4 text-sm font-semibold text-white">@vladimirivanov </div>
+</div>
+</div>
+</div>
+
+<div class="grid grid-cols-1 grid-rows-0 sm:gap-4 p-4 mt-4 mb-4 rounded-lg bg-nCardColor md:grid-cols-2 sm:grid-rows-2 md:grid-rows-1 lg:grid-cols-2">
+<div class="items-center">
+<h3 class="pb-4 text-xl font-bold leading-none text-white"><span class="text-2xl text-nPeriwinkle">
+<img src="./index_files/nteamer-mini.png" alt="nteamer logo nteam" width="36" height="36" class="inline-flex mr-1 w-9 h-9 bi bi-instagram">
+ZADNJA 4
+|</span>
+NTeamer posta
+</h3>
+<div class="flex items-center p-4 space-x-2 border rounded-lg bg-nCardColor border-nBackground sm:justify-start sm:items-start sm:flex-row ">
+<img class="object-cover w-8 h-8 rounded-full aligner" loading="lazy" src="./index_files/nteamer-mini.png">
+<div class="">
+<div class="flex space-x-3 text-center top-section sm:flex-row sm:text-left">
+<h1 class="font-bold text-white text-md">seki</h1>
+</div>
+<div class="text-sm font-semibold text-justify text-white sm:text-left">
+<h3 class="text-xs text-gray-400">
+@seki <span>• Danas</span>
+</h3>
+</div>
+<div class="mt-6 mb-4 text-sm font-semibold text-justify text-white sm:text-left">
+<p>
+gospodin
+</p>
+</div><img src="./index_files/screenshot(5).jpg" loading="lazy" class="rounded-lg" width="900" height="400"><div class="mt-6 mb-5 social-media">
+<ul class="flex mt-2 mr-5 ">
+<li class="flex text-white hover:text-gray-700" id="likePost" data-id="1735">
+<span class="inline mr-4" id="postCount" data-id="1735">5</span>
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" id="likeBtn" data-id="1735" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="items-center">
+<h3 class="sm:pb-4 text-sm sm:text-2xl font-bold leading-none text-nCardColor noselect"><span class="text-xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-twitter" viewBox="0 0 16 16">
+<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+</svg>
+ZADNJA 4
+|</span>
+NTeamer posta
+</h3>
+<div class="flex items-center p-4 space-x-2 border rounded-lg bg-nCardColor border-nBackground sm:justify-start sm:items-start sm:flex-row">
+<img class="object-cover w-8 h-8 rounded-full aligner" loading="lazy" src="./index_files/nteamer-mini.png">
+<div class="">
+<div class="flex space-x-3 text-center top-section sm:flex-row sm:text-left">
+<h1 class="font-bold text-white text-md">seki</h1>
+</div>
+<div class="text-sm font-semibold text-justify text-white sm:text-left">
+<h3 class="text-xs text-gray-400">
+@seki <span>• Danas</span>
+</h3>
+</div>
+<div class="mt-6 mb-4 text-sm font-semibold text-justify text-white sm:text-left">
+<p>
+Imalkoga iz
+autoskole?
+</p>
+</div><img src="./index_files/false" loading="lazy" class="rounded-lg" width="900" height="400"><div class="mt-6 mb-5 social-media">
+<ul class="flex mt-2 ">
+<li class="flex text-white hover:text-gray-700" id="likePost" data-id="1733">
+<span class="inline mr-4" id="postCount" data-id="1733">2</span>
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" id="likeBtn" data-id="1733" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-4" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="items-center">
+<h3 class="sm:pb-4 text-sm sm:text-2xl font-bold leading-none text-nCardColor noselect"><span class="text-xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-twitter" viewBox="0 0 16 16">
+<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+</svg>
+ZADNJA 4
+|</span>
+NTeamer posta
+</h3>
+<div class="flex items-center p-4 space-x-2 border rounded-lg bg-nCardColor border-nBackground sm:justify-start sm:items-start sm:flex-row">
+<img class="object-cover w-8 h-8 rounded-full aligner" loading="lazy" src="./index_files/nteamer-mini.png">
+<div class="">
+<div class="flex space-x-3 text-center top-section sm:flex-row sm:text-left">
+<h1 class="font-bold text-white text-md">hunter.calli</h1>
+</div>
+<div class="text-sm font-semibold text-justify text-white sm:text-left">
+<h3 class="text-xs text-gray-400">
+@hunter.calli <span>• Danas</span>
+</h3>
+</div>
+<div class="mt-6 mb-4 text-sm font-semibold text-justify text-white sm:text-left">
+<p>
+Mehanicarska :)
+</p>
+</div><img src="./index_files/screenshot(6).jpg" loading="lazy" class="rounded-lg" width="900" height="400"><div class="mt-6 mb-5 social-media">
+<ul class="flex mt-2 ">
+<li class="flex text-white hover:text-gray-700" id="likePost" data-id="1732">
+<span class="inline mr-4" id="postCount" data-id="1732">0</span>
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" id="likeBtn" data-id="1732" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-4" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="items-center">
+<h3 class="sm:pb-4 text-sm sm:text-2xl font-bold leading-none text-nCardColor noselect"><span class="text-xl text-nCardColor">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline-flex mr-1 w-9 h-9 bi bi-twitter" viewBox="0 0 16 16">
+<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+</svg>
+ZADNJA 4
+|</span>
+NTeamer posta
+</h3>
+<div class="flex items-center p-4 space-x-2 border rounded-lg bg-nCardColor border-nBackground sm:justify-start sm:items-start sm:flex-row">
+<img class="object-cover w-8 h-8 rounded-full aligner" loading="lazy" src="./index_files/screenshot(7).jpg">
+<div class="">
+<div class="flex space-x-3 text-center top-section sm:flex-row sm:text-left">
+<h1 class="font-bold text-white text-md">Albino</h1>
+</div>
+<div class="text-sm font-semibold text-justify text-white sm:text-left">
+<h3 class="text-xs text-gray-400">
+@albino <span>• Danas</span>
+</h3>
+</div>
+<div class="mt-6 mb-4 text-sm font-semibold text-justify text-white sm:text-left">
+<p>
+Direktnor
+agencije za
+nekretnije
+dospupan za
+suradnju javite
+se na
+broj:553/608-16
+1!
+</p>
+</div><div class="mt-6 mb-5 social-media">
+<ul class="flex mt-2 ">
+<li class="flex text-white hover:text-gray-700" id="likePost" data-id="1730">
+<span class="inline mr-4" id="postCount" data-id="1730">3</span>
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" id="likeBtn" data-id="1730" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+</svg>
+</a>
+</li>
+<li class="text-white hover:text-gray-700">
+<a href="https://force-roleplay.ml/panel/index#">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-4" viewBox="0 0 20 20" fill="currentColor">
+<path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path>
+</svg>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main>
+</div>
+</div>
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="account">
+<button class="btn_close-modal">×</button>
+<img src="./index_files/novac.png" loading="lazy" class="mx-auto mb-10 w-1/1 sm:w-2/5" alt="">
+<h1 class="flex justify-center modal__header">Načini plaćanja</h1>
+<div class="flex justify-center cursor-pointer">
+<img src="./index_files/paypal.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; togglePayPal()">
+</div>
+<div class="hidden paypalFrame">
+<div id="paypalForm" class="mt-5">
+<div class="flex justify-center">
+<div class="div"></div>
+<div class="ml-0 div">
+<label for="paypalAmount" class="font-bold text-white">Iznos uplate: </label><br>
+<input type="number" name="paypalAmount" id="paypalAmount" class="p-2 outline-none rounded-xl" placeholder="Unesite željeni iznos.." onkeyup="if (!window.__cfRLUnblockHandlers) return false; updateAmount()">
+</div>
+<div class="div"></div>
+<div class="div"></div>
+</div>
+<div id="smart-button-container" class="flex justify-center mx-auto mt-3">
+<div class="flex justify-center">
+<div id="paypal-payment-button"><div id="zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-unknown paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.335" style="height: 0px; transition: all 0.2s ease-in-out 0s;"><style nonce="">
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        min-height: 35px;
+                        min-width: 200px;
+                        max-width: 750px;
+                        font-size: 0;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > iframe.component-frame {
+                        z-index: 100;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > iframe.prerender-frame {
+                        transition: opacity .2s linear;
+                        z-index: 200;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > iframe.visible {
+                        opacity: 1;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > iframe.invisible {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    #zoid-paypal-buttons-uid_2033d36223_mjm6mda6ndk > .smart-menu {
+                        position: absolute;
+                        z-index: 300;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                </style><iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9udGVhbXJwLmNvbSJ9LCJtZXRhRGF0YSI6eyJ3aW5kb3dSZWYiOnsidHlwZSI6InBhcmVudCIsImRpc3RhbmNlIjowfX0sInJlZmVyZW5jZSI6eyJ0eXBlIjoicmF3IiwidmFsIjoie1widWlkXCI6XCJ6b2lkLXBheXBhbC1idXR0b25zLXVpZF8yMDMzZDM2MjIzX21qbTZtZGE2bmRrXCIsXCJjb250ZXh0XCI6XCJpZnJhbWVcIixcInRhZ1wiOlwicGF5cGFsLWJ1dHRvbnNcIixcImNoaWxkRG9tYWluTWF0Y2hcIjp7XCJfX3R5cGVfX1wiOlwicmVnZXhcIixcIl9fdmFsX19cIjpcIlxcXFwucGF5cGFsXFxcXC4oY29tfGNuKSg6XFxcXGQrKT8kXCJ9LFwidmVyc2lvblwiOlwiMTBfMV8wXCIsXCJwcm9wc1wiOntcInN0eWxlXCI6e1wiY3VzdG9tXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxhYmVsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxheW91dFwiOlwidmVydGljYWxcIixcImNvbG9yXCI6XCJibHVlXCIsXCJzaGFwZVwiOlwicGlsbFwiLFwidGFnbGluZVwiOmZhbHNlLFwiaGVpZ2h0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBlcmlvZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZW51UGxhY2VtZW50XCI6XCJiZWxvd1wifSxcImNyZWF0ZU9yZGVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDI5NDgxNTM1Zl9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwiY3JlYXRlT3JkZXJcIn19LFwib25BcHByb3ZlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZDMzOTE2ZDg4OV9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwib25BcHByb3ZlXCJ9fSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYjhhYTg2MjZkOV9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwib25DYW5jZWxcIn19LFwiY3NwTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZnVuZGluZ1NvdXJjZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJzdG9yYWdlU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83YjY0ODRiMzg4X21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfY2I3NDM4YTJiN19tam02bWRhNm5ka1wiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJzZXNzaW9uU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zNDMxYzYwZDE4X21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYTdlMDUzNWQ1Yl9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJjb21wb25lbnRzXCI6W1wiYnV0dG9uc1wiXSxcImxvY2FsZVwiOntcImNvdW50cnlcIjpcIlVTXCIsXCJsYW5nXCI6XCJlblwifSxcImNyZWF0ZUJpbGxpbmdBZ3JlZW1lbnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3JlYXRlU3Vic2NyaXB0aW9uXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ29tcGxldGVcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25TaGlwcGluZ0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yNjcwMDQxN2FhX21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFBvcHVwQnJpZGdlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNWE5OWNjOTExZV9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwiZ2V0UG9wdXBCcmlkZ2VcIn19LFwib25Jbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMWU4N2M5MzFhZV9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwib25Jbml0XCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF84ZjM1NWNmZGIzX21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImNsaWVudElEXCI6XCJBVXY4cnJjX1AtRWJQMkUwbXBiNDlCVjdyRnQzVXNyLXZkVVpPOFZHT25qUmVoR0hCWGtTemNocjM3U1lGMkdOZFFGWVNwNzJqaDVRVWh6R1wiLFwiY2xpZW50QWNjZXNzVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGFydG5lckF0dHJpYnV0aW9uSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwiZW5hYmxlVGhyZWVEb21haW5TZWN1cmVcIjpmYWxzZSxcInNka0NvcnJlbGF0aW9uSURcIjpcIjBiNTBiMTM3YTUwOTZcIixcInN0b3JhZ2VJRFwiOlwidWlkXzNmYWU0MTk5YWJfbWppNm50eTZtZHFcIixcInNlc3Npb25JRFwiOlwidWlkXzg2MjczNmEwMjdfbWppNm50eTZtZHFcIixcImJ1dHRvblNlc3Npb25JRFwiOlwidWlkXzVhNGRiODZjMjRfbWptNm1kYTZuZGtcIixcImVuYWJsZVZhdWx0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImVudlwiOlwic2FuZGJveFwiLFwiYW1vdW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25TaXplXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwaVN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nRWxpZ2liaWxpdHlcIjp7XCJwYXlwYWxcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjp0cnVlfSxcInBheWxhdGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInByb2R1Y3RzXCI6e1wicGF5SW4zXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfSxcInBheUluNFwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlsYXRlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH19fSxcImNhcmRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwiYnJhbmRlZFwiOnRydWUsXCJpbnN0YWxsbWVudHNcIjpmYWxzZSxcInZlbmRvcnNcIjp7XCJ2aXNhXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJtYXN0ZXJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJhbWV4XCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJkaXNjb3ZlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImhpcGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOmZhbHNlfSxcImVsb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImpjYlwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfX0sXCJndWVzdEVuYWJsZWRcIjpmYWxzZX0sXCJ2ZW5tb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiaXRhdVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiY3JlZGl0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJhcHBsZXBheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic2VwYVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiaWRlYWxcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJhbmNvbnRhY3RcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImdpcm9wYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImVwc1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic29mb3J0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJteWJhbmtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInAyNFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiemltcGxlclwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwid2VjaGF0cGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwYXl1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJibGlrXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ0cnVzdGx5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJveHhvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtYXhpbWFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYm9sZXRvYmFuY2FyaW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm1lcmNhZG9wYWdvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtdWx0aWJhbmNvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX19LFwicGxhdGZvcm1cIjpcImRlc2t0b3BcIixcInJlbWVtYmVyZWRcIjpbXSxcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlLFwiZW5hYmxlVmVubW9BcHBMYWJlbFwiOmZhbHNlfSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZsb3dcIjpcInB1cmNoYXNlXCIsXCJyZW1lbWJlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzYzMTUyNzlhYTdfbWptNm1kYTZuZGtcIixcIm5hbWVcIjpcInJlbWVtYmVyXCJ9fSxcImN1cnJlbmN5XCI6XCJVU0RcIixcImludGVudFwiOlwiY2FwdHVyZVwiLFwiYnV5ZXJDb3VudHJ5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNvbW1pdFwiOnRydWUsXCJ2YXVsdFwiOmZhbHNlLFwiZW5hYmxlRnVuZGluZ1wiOltdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXCJjcmVkaXRcIixcImNhcmRcIl0sXCJkaXNhYmxlQ2FyZFwiOltdLFwibWVyY2hhbnRJRFwiOltdLFwicmVuZGVyZWRCdXR0b25zXCI6W1wicGF5cGFsXCJdLFwiY3NwXCI6e1wibm9uY2VcIjpcIlwifSxcIm5vbmNlXCI6XCJcIixcImdldFBhZ2VVcmxcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9iMDA3YTk3NjU0X21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJnZXRQYWdlVXJsXCJ9fSxcInVzZXJJRFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNsaWVudE1ldGFkYXRhSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZGVidWdcIjpmYWxzZSxcInRlc3RcIjp7XCJhY3Rpb25cIjpcImNoZWNrb3V0XCJ9LFwid2FsbGV0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBheW1lbnRNZXRob2ROb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYnJhbmRlZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhcHBsZVBheVN1cHBvcnRcIjpmYWxzZSxcInN1cHBvcnRzUG9wdXBzXCI6dHJ1ZSxcInN1cHBvcnRlZE5hdGl2ZUJyb3dzZXJcIjpmYWxzZSxcInVzZXJFeHBlcmllbmNlRmxvd1wiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhcHBsZVBheVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJleHBlcmllbmNlXCI6XCJcIixcImFsbG93QmlsbGluZ1BheW1lbnRzXCI6dHJ1ZX0sXCJleHBvcnRzXCI6e1wiaW5pdFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzRmYzBhOGRiNDNfbWptNm1kYTZuZGtcIixcIm5hbWVcIjpcImluaXRcIn19LFwiY2xvc2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF84NzEzM2U0ZDRjX21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJjbG9zZTo6bWVtb2l6ZWRcIn19LFwiY2hlY2tDbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2EzMzY4OTdlMDBfbWptNm1kYTZuZGtcIixcIm5hbWVcIjpcImNoZWNrQ2xvc2VcIn19LFwicmVzaXplXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYzlmZjdkYTliZV9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwiTmVcIn19LFwib25FcnJvclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2IzNDE2N2NkOThfbWptNm1kYTZuZGtcIixcIm5hbWVcIjpcIkJlXCJ9fSxcInNob3dcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8xYmU5ZThjZTVjX21qbTZtZGE2bmRrXCIsXCJuYW1lXCI6XCJoZVwifX0sXCJoaWRlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDVmZGMzM2Y1ZF9tam02bWRhNm5ka1wiLFwibmFtZVwiOlwiZ2VcIn19LFwiZXhwb3J0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfN2E5ZjVlODZhY19tam02bWRhNm5ka1wiLFwibmFtZVwiOlwiamVcIn19fX0ifX0__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-cf8276f12b" class="component-frame visible" style="background-color: transparent; border: none;" src="./index_files/saved_resource.html"></iframe><div id="smart-menu" class="smart-menu"></div><div id="installments-modal" class="installments-modal"></div><iframe name="__detect_close_uid_db2db97511_mjm6mda6ndk__" style="display: none;" src="./index_files/saved_resource(1).html"></iframe></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6 cursor-pointer">
+<img src="./index_files/sms.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleSMS()">
+</div>
+<iframe name="fortumo_payment" class="hidden fortumoFrame" src="./index_files/0a5d4a4ea29404b4cd50c777ddbb0136.html" style="height:580px;width:380px; margin: 5% auto;"></iframe> <script type="text/javascript">
+            const toggleSMS = () => { document.querySelector('.fortumoFrame').classList.toggle('hidden'); } 
+            const togglePayPal = () => { document.querySelector('.paypalFrame').classList.toggle('hidden'); } 
+            let payAmount = '1'; 
+            const updateAmount = () => { 
+                const vrijednost = document.querySelector('#paypalAmount').value;
+                if(vrijednost.length > 0) { payAmount = vrijednost; } else { payAmount = '0'; } 
+            }
+        </script>
+<div class="px-6 mt-6 text-sm text-green-500 sm:text-md">
+<p><b>NAPOMENA:</b> Nako izvršenog plaćanja novac se automatski postavlja na Vaš balans!</p>
+</div>
+</div>
+<script src="./index_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./index_files/sidebar.js.download" type="text/javascript"></script>
+<script src="./index_files/index.js.download" type="text/javascript"></script>
+<script src="./index_files/notify.js.download" type="text/javascript"></script>
+<script src="./index_files/modal.js.download" type="text/javascript"></script>
+<script src="./index_files/js" type="text/javascript" data-uid-auto="uid_tjrjnlpxbksdhsoismaignhiqewrfi"></script>
+<script src="./index_files/paypal.js.download" type="text/javascript"></script>
+</div>
+
+
+</body></html>

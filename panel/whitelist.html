@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://force-roleplay.ml/panel/whitelist -->
+<html lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./whitelist_files/output.css">
+<link rel="shortcut icon" href="https://force-roleplay.ml/src/img/favicon.ico" type="image/x-icon">
+<title>NTeam UCP - Whitelist</title>
+</head>
+<body class="bg-nUcpBack">
+<div>
+<nav class="fixed z-30 w-full border-b bg-nCardColor border-nBackground">
+<input type="hidden" id="inputNotifikacije" value="WL je trenutno zatvorena, možete kupiti vanrednu"><div id="obavijest" class="items-center justify-center hidden w-full h-8 text-xs sm:text-lg" style=" 
+                    background-color: rgb(59 130 246);
+                ">
+<p class="font-bold text-white font-poppins">WL je trenutno zatvorena, možete kupiti vanrednu <a class="underline cursor-pointer" href="https://force-roleplay.ml/panel/shop">ovdje</a>.</p>
+<svg xmlns="http://www.w3.org/2000/svg" id="hideNotification" class="w-6 h-6 ml-2 text-white cursor-pointer sm:ml-4" fill="#fff" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</div> <div class="px-3 py-3 lg:px-5 lg:pl-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center justify-start">
+<button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-white hover:bg-nUcpBack focus:bg-nUcpBack focus:ring-2 focus:ring-nUcpBack">
+<svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+</svg>
+<svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<a href="https://force-roleplay.ml/panel/index" class="text-xl font-bold flex items-center lg:ml-2.5">
+<img src="./whitelist_files/navlogo.png" loading="lazy" class="h-12 mr-2" alt="NTeam Logo">
+</a>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="hidden lg:block lg:pl-32">
+<label for="topbar-search" class="sr-only">Pretraga</label>
+<div class="relative mt-1 lg:w-64">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="topbar-search" class="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-xl focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</div>
+<div class="flex items-center">
+<button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden">
+<span class="sr-only">Pretraga</span>
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<user>
+<a data-target="#account" class="cursor-pointer hidden bg-nUcpBack md:text-lg rounded-3xl sm:inline-flex ml-0 text-white text-[15px] sm:px-[0.55rem] md:px-5 py-2.5 text-center items-center mr-3">
+<span class="font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold" id="balans">&nbsp;
+0 €</span>
+</a>
+</user>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 overflow-hidden bg-nCardColor" id="sidebar1">
+<aside id="sidebar" class="fixed top-0 left-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 duration-75 lg:flex transition-width" aria-label="Sidebar">
+<div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-nCardColor">
+<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" id="sidebar1">
+<div class="flex-1 px-3 pt-6 bg-nCardColor" id="sidebarElement">
+<ul class="pb-2 space-y-2">
+<li>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="lg:hidden">
+<label for="mobile-search" class="sr-only">Pretraga</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+</path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="mobile-search" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-xl focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/profile" class="inline-flex items-center mt-4 mb-4 ml-6 font-bold text-center text-white text-md">
+<img class="object-cover w-10 h-10 mr-4 rounded-full" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" src="./whitelist_files/4b2be944217e7678038b60e20438dee4.jpg" alt="Profile image">
+ko jeto </a>
+</li>
+<li>
+<a data-target="#account" class="cursor-pointer bg-nUcpBack rounded-3xl ml-4 mb-4 text-white px-2 text-md py-2.5 text-center items-center mr-3 sm:hidden">
+<span class="font-xs sm:font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold">&nbsp;
+0 $</span>
+</a>
+</li>
+<a href="https://force-roleplay.ml/panel/index" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+</svg>
+<span class="ml-3 font-bold">Početna</span>
+</a>
+
+<li>
+<a href="https://force-roleplay.ml/panel/users" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 18 18">
+<path fill-rule="evenodd" d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-2 font-bold whitespace-nowrap">Lista korisnika</span>
+</a>
+</li>
+ <li>
+<a href="https://force-roleplay.ml/panel/shop" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Kupovina</span>
+<span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-white bg-red-500 rounded-full">Shop</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/topdonators" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Top Donatori</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/whitelist" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Whitelist</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/actions/Auth/Logout?logout" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Odjava</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+<div id="main-content" class="relative w-full h-full overflow-y-auto bg-nUcpBack lg:ml-64">
+<main class="px-4 pt-6">
+<p class="container mx-auto mt-6 text-sm font-bold text-gray-400 font-poppins"><i class="mr-2 far fa-file-alt"></i> User Control Panel &gt;
+Whitelist</p>
+<div>
+<div class="container p-6 mx-auto mb-6 text-white rounded-lg bg-nCardColor">
+<div class="flex items-center justify-center mb-4">
+<h3 class="flex items-center justify-center font-bold leading-none text-white border-b-2 border-nBackground text-md sm:text-xl">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-2 text-nPeriwinkle sm:w-10 sm:h-10 md:w-12 md:h-12" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<div class="block">
+<h3 class="mr-3 text-white text-md sm:text-3xl">
+Whitelista je zatvorena ! </h3>
+</div>
+</h3>
+</div>
+<div class="container">
+<div class="flex justify-center mx-auto">
+<div id="alert-2" class="flex p-4 mx-auto mb-4 text-black rounded-lg" role="alert" style="background-color: rgb(250 204 21);">
+<svg aria-hidden="true" class="flex-shrink-0 w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+<span class="sr-only">Info</span>
+<div class="ml-3 text-sm font-medium text-black">
+Trenutno nije moguće poslati zahtjev za whitelistu.<br>
+Ukoliko želite da ispunite vanrednu whitelistu možete kupiti tu opciju u našem shopu.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="account">
+<button class="btn_close-modal">×</button>
+<img src="./whitelist_files/novac.png" loading="lazy" class="w-2/5 mx-auto mb-10" alt="">
+<h1 class="flex justify-center modal__header">Načini plaćanja</h1>
+<div class="flex justify-center cursor-pointer">
+<img src="./whitelist_files/paypal.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; togglePayPal()">
+</div>
+<div class="hidden paypalFrame">
+<div id="paypalForm" class="mt-5">
+<div class="grid content-center grid-cols-1 mx-auto sm:grid-cols-4 md:grid-cols-4">
+<div class="div"></div>
+<div class="ml-0 div md:ml-6">
+<label for="paypalAmount" class="font-bold text-white">Iznos uplate: </label><br>
+<input type="number" name="paypalAmount" id="paypalAmount" class="p-2 rounded-lg outline-none" placeholder="Unesite željeni iznos.." onkeyup="if (!window.__cfRLUnblockHandlers) return false; updateAmount()">
+</div>
+<div class="div"></div>
+<div class="div"></div>
+</div>
+<div id="smart-button-container" class="flex justify-center mx-auto mt-3">
+<div style="text-align: center;">
+<div id="paypal-payment-button"><div id="zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-unknown paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.335" style="height: 0px; transition: all 0.2s ease-in-out 0s;"><style nonce="">
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        min-height: 35px;
+                        min-width: 200px;
+                        max-width: 750px;
+                        font-size: 0;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > iframe.component-frame {
+                        z-index: 100;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > iframe.prerender-frame {
+                        transition: opacity .2s linear;
+                        z-index: 200;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > iframe.visible {
+                        opacity: 1;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > iframe.invisible {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    #zoid-paypal-buttons-uid_311594c021_mja6mtk6ndg > .smart-menu {
+                        position: absolute;
+                        z-index: 300;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                </style><iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9udGVhbXJwLmNvbSJ9LCJtZXRhRGF0YSI6eyJ3aW5kb3dSZWYiOnsidHlwZSI6InBhcmVudCIsImRpc3RhbmNlIjowfX0sInJlZmVyZW5jZSI6eyJ0eXBlIjoicmF3IiwidmFsIjoie1widWlkXCI6XCJ6b2lkLXBheXBhbC1idXR0b25zLXVpZF8zMTE1OTRjMDIxX21qYTZtdGs2bmRnXCIsXCJjb250ZXh0XCI6XCJpZnJhbWVcIixcInRhZ1wiOlwicGF5cGFsLWJ1dHRvbnNcIixcImNoaWxkRG9tYWluTWF0Y2hcIjp7XCJfX3R5cGVfX1wiOlwicmVnZXhcIixcIl9fdmFsX19cIjpcIlxcXFwucGF5cGFsXFxcXC4oY29tfGNuKSg6XFxcXGQrKT8kXCJ9LFwidmVyc2lvblwiOlwiMTBfMV8wXCIsXCJwcm9wc1wiOntcInN0eWxlXCI6e1wiY3VzdG9tXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxhYmVsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxheW91dFwiOlwidmVydGljYWxcIixcImNvbG9yXCI6XCJibHVlXCIsXCJzaGFwZVwiOlwicGlsbFwiLFwidGFnbGluZVwiOmZhbHNlLFwiaGVpZ2h0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBlcmlvZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZW51UGxhY2VtZW50XCI6XCJiZWxvd1wifSxcImNyZWF0ZU9yZGVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDFhZDAwOTFiZF9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwiY3JlYXRlT3JkZXJcIn19LFwib25BcHByb3ZlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYzQwMzY0ZmU0ZV9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwib25BcHByb3ZlXCJ9fSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYWNkYTE0MmE4N19tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwib25DYW5jZWxcIn19LFwiY3NwTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZnVuZGluZ1NvdXJjZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJzdG9yYWdlU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9jZWMxYTg2N2VlX21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMWIxMDc0MDk1Zl9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJzZXNzaW9uU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yOWFlOTU0YmEzX21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYThlZjYyNjk1Y19tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJjb21wb25lbnRzXCI6W1wiYnV0dG9uc1wiXSxcImxvY2FsZVwiOntcImNvdW50cnlcIjpcIlVTXCIsXCJsYW5nXCI6XCJlblwifSxcImNyZWF0ZUJpbGxpbmdBZ3JlZW1lbnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3JlYXRlU3Vic2NyaXB0aW9uXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ29tcGxldGVcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25TaGlwcGluZ0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83Mjk3ZGQzZDM4X21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFBvcHVwQnJpZGdlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfOGNmOTA4N2U2OF9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwiZ2V0UG9wdXBCcmlkZ2VcIn19LFwib25Jbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYTE5MTkzOWM0MV9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwib25Jbml0XCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9jODUxMzBhOWQ0X21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImNsaWVudElEXCI6XCJBVXY4cnJjX1AtRWJQMkUwbXBiNDlCVjdyRnQzVXNyLXZkVVpPOFZHT25qUmVoR0hCWGtTemNocjM3U1lGMkdOZFFGWVNwNzJqaDVRVWh6R1wiLFwiY2xpZW50QWNjZXNzVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGFydG5lckF0dHJpYnV0aW9uSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwiZW5hYmxlVGhyZWVEb21haW5TZWN1cmVcIjpmYWxzZSxcInNka0NvcnJlbGF0aW9uSURcIjpcImYyMjc2ODVlMTE4YTVcIixcInN0b3JhZ2VJRFwiOlwidWlkXzNmYWU0MTk5YWJfbWppNm50eTZtZHFcIixcInNlc3Npb25JRFwiOlwidWlkX2YwNTc5MmExZDVfbWphNm10cTZtenVcIixcImJ1dHRvblNlc3Npb25JRFwiOlwidWlkXzJhYTA4ZWFiOWNfbWphNm10azZuZGdcIixcImVuYWJsZVZhdWx0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImVudlwiOlwic2FuZGJveFwiLFwiYW1vdW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25TaXplXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwaVN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nRWxpZ2liaWxpdHlcIjp7XCJwYXlwYWxcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjp0cnVlfSxcInBheWxhdGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInByb2R1Y3RzXCI6e1wicGF5SW4zXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhcmlhbnRcIjpudWxsfSxcInBheUluNFwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlsYXRlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH19fSxcImNhcmRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwiYnJhbmRlZFwiOnRydWUsXCJpbnN0YWxsbWVudHNcIjpmYWxzZSxcInZlbmRvcnNcIjp7XCJ2aXNhXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJtYXN0ZXJjYXJkXCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJhbWV4XCI6e1wiZWxpZ2libGVcIjp0cnVlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJkaXNjb3ZlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImhpcGVyXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcInZhdWx0YWJsZVwiOmZhbHNlfSxcImVsb1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfSxcImpjYlwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjp0cnVlfX0sXCJndWVzdEVuYWJsZWRcIjpmYWxzZX0sXCJ2ZW5tb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiaXRhdVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiY3JlZGl0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJhcHBsZXBheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic2VwYVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiaWRlYWxcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJhbmNvbnRhY3RcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImdpcm9wYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImVwc1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwic29mb3J0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJteWJhbmtcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInAyNFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiemltcGxlclwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwid2VjaGF0cGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwYXl1XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJibGlrXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJ0cnVzdGx5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJveHhvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtYXhpbWFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYm9sZXRvYmFuY2FyaW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIm1lcmNhZG9wYWdvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtdWx0aWJhbmNvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX19LFwicGxhdGZvcm1cIjpcImRlc2t0b3BcIixcInJlbWVtYmVyZWRcIjpbXSxcImV4cGVyaW1lbnRcIjp7XCJlbmFibGVWZW5tb1wiOmZhbHNlLFwiZW5hYmxlVmVubW9BcHBMYWJlbFwiOmZhbHNlfSxcInBheW1lbnRSZXF1ZXN0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImZsb3dcIjpcInB1cmNoYXNlXCIsXCJyZW1lbWJlclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2ZkMDkyMmRjNjFfbWphNm10azZuZGdcIixcIm5hbWVcIjpcInJlbWVtYmVyXCJ9fSxcImN1cnJlbmN5XCI6XCJVU0RcIixcImludGVudFwiOlwiY2FwdHVyZVwiLFwiYnV5ZXJDb3VudHJ5XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNvbW1pdFwiOnRydWUsXCJ2YXVsdFwiOmZhbHNlLFwiZW5hYmxlRnVuZGluZ1wiOltdLFwiZGlzYWJsZUZ1bmRpbmdcIjpbXCJjcmVkaXRcIixcImNhcmRcIl0sXCJkaXNhYmxlQ2FyZFwiOltdLFwibWVyY2hhbnRJRFwiOltdLFwicmVuZGVyZWRCdXR0b25zXCI6W1wicGF5cGFsXCJdLFwiY3NwXCI6e1wibm9uY2VcIjpcIlwifSxcIm5vbmNlXCI6XCJcIixcImdldFBhZ2VVcmxcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9jOWU0NjdjODg3X21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJnZXRQYWdlVXJsXCJ9fSxcInVzZXJJRFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImNsaWVudE1ldGFkYXRhSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZGVidWdcIjpmYWxzZSxcInRlc3RcIjp7XCJhY3Rpb25cIjpcImNoZWNrb3V0XCJ9LFwid2FsbGV0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBheW1lbnRNZXRob2ROb25jZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYnJhbmRlZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhcHBsZVBheVN1cHBvcnRcIjpmYWxzZSxcInN1cHBvcnRzUG9wdXBzXCI6dHJ1ZSxcInN1cHBvcnRlZE5hdGl2ZUJyb3dzZXJcIjpmYWxzZSxcInVzZXJFeHBlcmllbmNlRmxvd1wiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJhcHBsZVBheVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJleHBlcmllbmNlXCI6XCJcIixcImFsbG93QmlsbGluZ1BheW1lbnRzXCI6dHJ1ZX0sXCJleHBvcnRzXCI6e1wiaW5pdFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2I2NDUwNTUxZjFfbWphNm10azZuZGdcIixcIm5hbWVcIjpcImluaXRcIn19LFwiY2xvc2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yYmNmZmRlODMyX21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJjbG9zZTo6bWVtb2l6ZWRcIn19LFwiY2hlY2tDbG9zZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzNiNmZhMmE2NzZfbWphNm10azZuZGdcIixcIm5hbWVcIjpcImNoZWNrQ2xvc2VcIn19LFwicmVzaXplXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMmMwZWVkNDYwNl9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwiTmVcIn19LFwib25FcnJvclwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzY5MTE5MzVlM2NfbWphNm10azZuZGdcIixcIm5hbWVcIjpcIkJlXCJ9fSxcInNob3dcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9iMjI4ODA1YjI1X21qYTZtdGs2bmRnXCIsXCJuYW1lXCI6XCJoZVwifX0sXCJoaWRlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYjViM2QzZGFmZV9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwiZ2VcIn19LFwiZXhwb3J0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZjM4NDY5OGU0MV9tamE2bXRrNm5kZ1wiLFwibmFtZVwiOlwiamVcIn19fX0ifX0__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-c83a273caa" class="component-frame visible" style="background-color: transparent; border: none;" src="./whitelist_files/saved_resource.html"></iframe><div id="smart-menu" class="smart-menu"></div><div id="installments-modal" class="installments-modal"></div><iframe name="__detect_close_uid_86c80788a1_mja6mtk6ndg__" style="display: none;" src="./whitelist_files/saved_resource(1).html"></iframe></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6 cursor-pointer">
+<img src="./whitelist_files/sms.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleSMS()">
+</div>
+<iframe name="fortumo_payment" class="hidden fortumoFrame" src="./whitelist_files/0a5d4a4ea29404b4cd50c777ddbb0136.html" style="height:580px;width:380px; margin: 5% auto;"></iframe> <script type="text/javascript">
+            const toggleSMS = () => { document.querySelector('.fortumoFrame').classList.toggle('hidden'); } 
+            const togglePayPal = () => { document.querySelector('.paypalFrame').classList.toggle('hidden'); } 
+            let payAmount = '1'; 
+            const updateAmount = () => { 
+                const vrijednost = document.querySelector('#paypalAmount').value;
+                if(vrijednost.length > 0) { payAmount = vrijednost; } else { payAmount = '0'; } 
+            }
+        </script>
+<div class="px-6 mt-6 text-sm text-green-500 sm:text-md">
+<p><b>NAPOMENA:</b> Nako izvršenog plaćanja novac se automatski postavlja na Vaš balans!</p>
+</div>
+</div>
+<script src="./whitelist_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./whitelist_files/sidebar.js.download" type="text/javascript"></script>
+<script src="./whitelist_files/modal.js.download" type="text/javascript"></script>
+<script src="./whitelist_files/notify.js.download" type="text/javascript"></script>
+<script src="./whitelist_files/js" type="text/javascript" data-uid-auto="uid_tjrjnlpxbksdhsoismaignhiqewrfi"></script>
+<script src="./whitelist_files/paypal.js.download" type="text/javascript"></script>
+
+
+</body></html>
