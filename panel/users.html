@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://force-roleplay.ml/panel/users -->
+<html lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./users_files/output.css">
+<link rel="shortcut icon" href="https://force-roleplay.ml/src/img/favicon.ico" type="image/x-icon">
+<title>NTeam UCP - Lista korisnika</title>
+<script src="./users_files/pptm.js.download" id="xo-pptm" async=""></script></head>
+<body class="bg-nUcpBack">
+<div>
+<nav class="fixed z-30 w-full border-b bg-nCardColor border-nBackground">
+<input type="hidden" id="inputNotifikacije" value="WL je trenutno zatvorena, možete kupiti vanrednu"><div id="obavijest" class="items-center justify-center hidden w-full h-8 text-xs sm:text-lg" style=" 
+                    background-color: rgb(59 130 246);
+                ">
+<p class="font-bold text-white font-poppins">WL je trenutno zatvorena, možete kupiti vanrednu <a class="underline cursor-pointer" href="https://force-roleplay.ml/panel/shop">ovdje</a>.</p>
+<svg xmlns="http://www.w3.org/2000/svg" id="hideNotification" class="w-6 h-6 ml-2 text-white cursor-pointer sm:ml-4" fill="#fff" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</div> <div class="px-3 py-3 lg:px-5 lg:pl-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center justify-start">
+<button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-white hover:bg-nUcpBack focus:bg-nUcpBack focus:ring-2 focus:ring-nUcpBack">
+<svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+</svg>
+<svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<a href="https://force-roleplay.ml/panel/index" class="text-xl font-bold flex items-center lg:ml-2.5">
+<img src="./users_files/navlogo.png" loading="lazy" class="h-12 mr-2" alt="NTeam Logo">
+</a>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="hidden lg:block lg:pl-32">
+<label for="topbar-search" class="sr-only">Pretraga</label>
+<div class="relative mt-1 lg:w-64">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="topbar-search" class="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-xl focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</div>
+<div class="flex items-center">
+<button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 lg:hidden">
+<span class="sr-only">Pretraga</span>
+<svg class="w-6 h-6 rounded-xl" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<user>
+<a data-target="#account" class="cursor-pointer hidden bg-nUcpBack md:text-lg rounded-3xl sm:inline-flex ml-0 text-white text-[15px] sm:px-[0.55rem] md:px-5 py-2.5 text-center items-center mr-3">
+<span class="font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold" id="balans">&nbsp;
+0 €</span>
+</a>
+</user>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 overflow-hidden bg-nCardColor" id="sidebar1">
+<aside id="sidebar" class="fixed top-0 left-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 duration-75 lg:flex transition-width" aria-label="Sidebar">
+<div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-nCardColor">
+<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" id="sidebar1">
+<div class="flex-1 px-3 pt-3 bg-nCardColor" id="sidebarElement">
+<ul class="pb-2 space-y-2">
+<li>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="lg:hidden">
+<label for="mobile-search" class="sr-only">Pretraga</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+</path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="mobile-search" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-xl focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/profile" class="inline-flex items-center mt-4 mb-4 ml-6 font-bold text-center text-white text-md">
+<img class="object-cover w-10 h-10 mr-4 rounded-full" loading="lazy" id="profilnaSlika2" onerror="this.src=&#39;../src/img/logo.png&#39;" src="./users_files/4b2be944217e7678038b60e20438dee4.jpg" alt="Profile image">
+ko jeto </a>
+</li>
+<li>
+<a data-target="#account" class="cursor-pointer bg-nUcpBack rounded-3xl ml-4 mb-4 text-white px-2 text-md py-2.5 text-center items-center mr-3 sm:hidden">
+<span class="font-xs sm:font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold">&nbsp;
+0 $</span>
+</a>
+</li>
+<a href="https://force-roleplay.ml/panel/index" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+</svg>
+<span class="ml-3 font-bold">Početna</span>
+</a>
+
+<li>
+<a href="https://force-roleplay.ml/panel/users" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 18 18">
+<path fill-rule="evenodd" d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-2 font-bold whitespace-nowrap">Lista korisnika</span>
+</a>
+</li>
+ <li>
+<a href="https://force-roleplay.ml/panel/shop" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Kupovina</span>
+<span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-white bg-red-500 rounded-full">Shop</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/topdonators" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Top Donatori</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/whitelist" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Whitelist</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/actions/Auth/Logout?logout" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Odjava</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+<div id="main-content" class="relative w-full h-full overflow-y-auto bg-nUcpBack lg:ml-64">
+<main class="px-4">
+<p class="container mx-auto mt-16 mb-2 text-sm font-bold text-gray-400 font-poppins"><i class="mr-2 far fa-file-alt"></i> User Control Panel &gt;
+Lista korisnika</p>
+<form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="kaizer"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cb486e81b530af85e8b6fbd3394996be.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">kaizer</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Kaizer Pawn</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Nedim"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/a9fdf43709d8373e4d8cd42ea40475ab.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">nedim</p>
+ <p class="flex justify-start pl-5 text-sm text-slate-500">Nedim Lepić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Ewony"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/9c2406f7b2190a50251f48d89c8d284c.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">ewony</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Ewony Dev</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Ghostic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/logo.png" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">ghostic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Ghostic Ped</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="AmerSaba"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/7bcd728ce7881eff538865d1b7039a7b.png" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">amersaba</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amer Saba</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="OKI_DJOMBA"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/60d6b5c121898cec25b030a16d148c6e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">oki_djomba</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Osman Muharemagic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Direktor Svemira"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/f26434e610a95ef5b650da334ab01fbe.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">direktorsvemira</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Matej Grgić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Nixara"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/623f94705a77460a5353aac3a9d8c0c5.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">nixara</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Emilio Gaviria</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Matić"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/18afa27789cd27b934c785436a1c6c9a.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">matić</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dominik Matic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Divinus"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/206ad8ea12cd902cfa427ca7dc2e7894.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">divinus</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Irfan Šito</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+ </form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Sulto_-🐊"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/6ab7809787e46148ea8fc2d875b40ade.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">sulto_-🐊</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Hamza Sultanic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Juxa"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/da3358d445b017c37f19011839c149f1.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">juxa</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Jure Paradzik</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="AndrijaD"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c79b57159ea9083d573a82bab823e243.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">andrijad</p>
+ <p class="flex justify-start pl-5 text-sm text-slate-500">Andrija Danilovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="neda"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/449df66b7aaa1ef3ef33b2965ac5d54e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">neda</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nedim Sedic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Karlo555"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/3ee10d041e5c776ae0455564a07c265a.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">karlo555</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Karlo Kranjec</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="_dzeno_1"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/974987f39bf66cb386dd1babc0ecd754.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">_dzeno_1</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dzenan Zejnilovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Rile"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/116cb90078cc53ffbf4a4a971cf149a2.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">rile</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Rijad Dugonjic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Molleneid"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/76ce6f9436c68c57a9601b0b1c1c97dd.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">molleneid</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Luka Lovrinovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="mihajlo_miki__"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+ <div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/370e41c45189e51f3a8b395d1c698ed4.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">mihajlo_miki__</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Mihajlo Dragicevic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="itz_mihael"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cd28f87537eadfabcc5dedc385da3d49.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">itz_mihael</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Mihael R</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Civic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/86d32170a49c184fa1b2a7bedc6e6543.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">civic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Civic Aladin</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Kurlaga"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/f069b55a5f48c418a5a4688aa66a7c0d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">kurlaga</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Uros Kurlagic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Dzonson93"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/4a457dfa9702b85b8c64b081ede4de1d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dzonson93</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nikola Stupkin</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="gem"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/f7b621b1f28d1f9b9a41324432401607.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">gem</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Jelena Borisavljevic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="abgames555@gmail.com"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/9ab02a6f7f916c24c4af36bc18b3741a.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">abgames555@gmail.com</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amir Beslagic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="saleh4ppy"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/b8eb68fa5658ee830c90787a75af6abe.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">saleh4ppy</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Sasa Stojadinovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="emro"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/91a8ffe2c02c6314ed885645d04b9a81.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">emro</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Emrah Devic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Aldin997"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/bc5d5fa945611e3fa35f429e056aca9d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">aldin997</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Aldin Kurbasic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="oldsql1337"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/988c5b1bafc382bb58e1af7668f805b9.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">oldsql1337</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Aldin Mehadzic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Šaula_B"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+ <div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c7e5ca5e63ae4cda4a2217cc620e8798.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">Šaula_b</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Boris Šaula</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Emko2K"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/0fc13df7f730d5a109b7fa344a320276.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">emko2k</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Emrah Emkic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Chaky"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/d88f6b212bea90b66aea61cb52ee14ba.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">chaky</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Asmir Dizdarević</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="KeLLe"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/e61b32eae96718cc275fefc93ab2be78.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">kelle</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dženan Selimović</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Dimi"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/47f30b0287811023b3688f816cbbae2d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dimi</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dimitrije Svilenković</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Madzar"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/7f3e28ca7e53661f7f382e948e6ac796.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+ <p class="flex justify-start pl-5 font-bold text-md md:text-lg">madzar</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nikola Madzarevic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Ejlic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cefa80a26187c32d618803d8d308ba16.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">ejlic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Hamza Godinjak</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="hariis.salkic07"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/1a45673532689a2513f830c7eeb3b67b.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">hariis.salkic07</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Hariis Salkic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Puma0"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/ac0b9afb0e4792e90bebb752a506eb20.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">puma0</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Bekir Bajrami</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Darko"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/425961585e6865bee3a9de23aea411bd.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">darko</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Darko Fremic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="hawyy"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c1a31bba5adade00e2a975fba9579c7e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">hawyy</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Harun Havic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="berin452"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/32f0782f77a3963d4806aa463e4a741e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">berin452</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Berin Hadžimuratović</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Maki"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/542d34a346a6b236cc0663d3048b8662.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">maki</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Mateja Todorovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="mutapcyc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/1c29e44958a9e9974cb18dc02771a6df.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">mutapcyc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Kerim Mutapcic</p>
+</div>
+ </div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Antox"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c229ce64fb20522c8f19498c95af2ef4.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">antox</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Antonio Medic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="RealAmarr"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/be8d9b045ebd88b70e25059bc7db6102.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">realamarr</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amar Djubo</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Murgicc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/8cc61c0a6b3aa899406ed2e88356d29b.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">murgicc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amer Murgic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="TheRealHodza"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cfaebb9ff455ee8e42dd2564559dbc8b.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">therealhodza</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Malik Rizvanovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="King-Mrša"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cc8884917318f9a6aa156885a6e48228.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">king-mrša</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Juro Mršić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="thesync"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper"> 
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/4970ffa1feec83f16ed5e60cb2be313d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">thesync</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Sanel Memic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="dark"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/3dda9e4a48a6ca7ff64db006b121b86a.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dark</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Marko Juric</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Emir Besic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/fc581f3c2298886b0bfe44adf8064181.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">emirbesic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Emir Besic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="M4ster"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/312d10a04ddbc6c468c5c3b05f274cda.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">m4ster</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Aleksandar Čalović</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Medo773"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/138daeb992341c57ecceaef548c37f20.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">medo773</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Medo 773</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Lamija Tanovic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/889b4be6bcaad4ef69d169a5f580a2de.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">lamijatanovic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Lamija Tanovic</p>
+ </div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Nikola292"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/07701826475e7507517c309eb3636210.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">nikola292</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nikola Krajisnik</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="X_Custom"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/6b10bf4c7026f2ee7666d8eb9e52dc8f.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">x_custom</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nermin Đulepa</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Mihajlo5200"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/626157cda91ede46a74d7679ef8d8a54.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">mihajlo5200</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Mihajlo Maksimovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Faris Solbic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/2ad7746fab5445a9a36a7541ae36bfd8.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">farissolbic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Faris Solbic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="WATT"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/e57ef612a4e2e8e95ee1c66af9c715f1.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">watt</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">WAT 33</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="!PeTaR!"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+ <div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/767a53a7a6be921f6d8644396394e36c.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">!petar!</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">William King</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="amaar63"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/f832a4fa0c4ce61cbeaad112b6e47299.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">amaar63</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amar Nuspahic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Samir"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/1adaddadf317b44695d962c6b77d6f33.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">samir</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Samir Sehic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Tacin00"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c58dacb4b417d9a9c5353c746aebe7f5.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">tacin00</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Marko Markovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="kenancacan"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/4808974a1732cef9baec7ef42c8287dd.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">kenancacan</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Kenan Cacan</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="file"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/5467d6ccbfb069dc792a35fab8502e54.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">file</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">stefan milenkovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="medinic02 "><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/75b7052be9d92ede9e192fab7ede6c9d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">medinic02</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">dzevad medinic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Major"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/15e5b22f1fde1b0b6a0a6b3b268d3666.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">major</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dejan Vlajic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Skopljo"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/3a416a69f32e9af7ccad3bd4011be9b3.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">skopljo</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Jusuf Sk</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Hrapa"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/aafeb2705aa19ed862f3ddb0c4d9112d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">hrapa</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Armin Hrapovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="biban"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/59b5a90b06947c475c92bd562e9f3c9a.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">biban</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Marin Mlakić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Pestalic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+ <div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/1ea9cd7e4f18ebdef6a7e507aefa9647.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">pestalic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Ammar Pestalic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="h0neyinaa"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/a5af1e2f79ccbd58ac839b6ea180b97c.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">h0neyinaa</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">H0neyinaa 111</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="VodRox"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/ecabb90480056ddcca122dccab691d54.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">vodrox</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Antonio Dumić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Sahbaz"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/5e769c6ab951312483a63d9fbe497747.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">sahbaz</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Amer Alic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Pravi_RonMerlac"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/fa7e8889727043ed62fe3448b6cf9f61.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">pravi_ronmerlac</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Rahman Salihovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Pjevac"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/b7fcf466ec3e722df45e42850bb076a5.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">pjevac</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Uros Pjevac</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="dulemoc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/47e1c751a3b0d314dd0605003dadaeae.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dulemoc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dusan Lazic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="CiCk0"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c139e301bf38db8a9b1bab120ebd8d4e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">cick0</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Alem Cicvara</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="TOrlov"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/6148bc09fcb7926905f196856fee7de2.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">torlov</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Tristan Orlov</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Dunker"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/621e0fd74c324292a7bf3a358edc3903.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dunker</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nikola Djordjevic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="haris12434"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c247206ed5e4b91b5e11a119576a828e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">haris12434</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Haris Zukic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Hrky"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/bbd03cb05ebd79b764f1b62e1d810679.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">hrky</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Hrvoje Pazin</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Dorothy97"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/d8df9809a913cc13e7d1bfd2bdd15c62.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">dorothy97</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Dorothy Žepina</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="zehranhc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/2ae56f5ea9cd9b53f1499ebc941df757.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">zehranhc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Zehra Nuhanovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Bronson.19"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/13855ca4baafb45096d0ef9c4f3e46e3.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">bronson.19</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Stefan Medic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Tomi35zgb"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/2f7be9dee06aa57e3f0fcc9290cd189d.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">tomi35zgb</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Tomislav Kozjak</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="_DinN_"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/8b61bde2dbe4678e42e6e67e05c61cbd.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">_dinn_</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Din Kugic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="zine"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c4641f22d7bccc19c712ca99472b2996.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">zine</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Zinedin Alispahic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="theodobrila"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/2041ae893ba882e0538f1bc61c5ab73b.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">theodobrila</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Theo Dobrila</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="GhostMrmot"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c79e1c92cdfd8d884b5dc0049aedd693.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">ghostmrmot</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nemanja Aleksic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="MujkeA"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/a05a0fbbfdd802bb1af9d287e98cdde1.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">mujkea</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Mujo Alic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="xTonicSx"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/7ae820f07b061842407943c2656a6ebc.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">xtonicsx</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Toni Gusic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="DARAAA"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+ <div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/372d3ee16efcc5056bb3747b3668a881.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">daraaa</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Darijo Misura</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="BOXS"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/d6b1ef12c7dbcf27cb7f07e1ffdbd228.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">boxs</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Bogdan Stankovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="elko_dsgn"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/08127de278de51c219aca5c6f498eb4e.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">elko_dsgn</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Elmedin Mahmutovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="MAR4E"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/c9c4c1a9d9062567092feb102651b563.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">mar4e</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Marko Dobrevski</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="IamDavid"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/a_2e322854d416b7dae5ca3758f2b8d1c4.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">iamdavid</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">David Aladzic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="JUZBA"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/61017463b251264a63743079ead9b08c.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">juzba</p>
+ <p class="flex justify-start pl-5 text-sm text-slate-500">Nermin Juzbasic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Tim"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/6e42e8aadb4eded9b7002e2192d6cd34.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">tim</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Tim Bradford</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Abazex"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/3fb881c8aec90b60552f420192d7f3a7.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">abazex</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Abaz Zenkovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="maaricc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/3127fce10d04507f90e57a29814c6c7b.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">maaricc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Luka Marić</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="zmija"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/375090cfb44c11ff5a5fc53f1874c931.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">zmija</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Petar Mau</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="aandrijailiccc"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/eedbfa07d5e2658216c0903c6f736ee5.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">aandrijailiccc</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Andrija Ilic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Nele"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+ <div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/26b1b5537c621a02a231837c048a7612.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">nele</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nemanja Dinic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Marko Melezovic"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/e414b129efce8d45fb3dafcc359cfd3f.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">markomelezovic</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Marko Melezovic </p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="skorlA."><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/729b97e6c69b139bb67943a93644b2fc.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">skorla.</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Salvatore Bonpensiero</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="harex765"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/828375c9b9c98ee0bf0b2ae99754aec9.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">harex765</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">harun sehovic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Rulle"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/4c3402693290459d68f9fd75aeeffd09.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">rulle</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Rusmir Stovrag </p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="ReDa"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/dced4f8608d1d89c3b4e18baffba63c1.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">reda</p>
+ <p class="flex justify-start pl-5 text-sm text-slate-500">David Rendulic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Nikola Lale"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/cff7b216834492890f70ff519af4b85c.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">nikolalale</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Nikola Lale</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="BTomas aka Alejandro Miguel Garcia"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/4f3c402bac352414ed056e67739baacf.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">btomasakaalejandromiguelgarcia</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Borna Tomaš</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="Juxara"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/8e7d0a31f6ee9c47e49cad423890dbed.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">juxara</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Michael Briant </p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form><form action="https://force-roleplay.ml/panel/user" method="POST"><input type="hidden" name="pretraga" value="RioHenri"><button type="submit" class="container flex w-full h-full p-2 mx-auto mb-2 text-white rounded-lg cursor-pointer bg-nCardColor font-poppins ">
+<div class="grid grid-cols-1 grid-rows-1">
+<div class="flex justify-start">
+<div class="flex pl-5">
+<div class="flex items-center mb-1 img-wrapper">
+<img id="profilnaSlika" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" class="w-12 h-12 mt-1 rounded-full image md:h-auto" src="./users_files/80e6ca2a1fddf3a2fe26f193e43fe7b4.jpg" alt="Profile image">
+</div><div class="mt-2 sm:mt-1">
+<p class="flex justify-start pl-5 font-bold text-md md:text-lg">riohenri</p>
+<p class="flex justify-start pl-5 text-sm text-slate-500">Alen Dordevic</p>
+</div>
+</div>
+</div>
+</div>
+</button>
+</form> <div class="hidden div md:flex"></div>
+<div class="hidden div md:flex"></div>
+</main></div>
+<script type="text/javascript"> function uploadButton() { document.querySelector('#hiddenFile').click(); } </script>
+<form id="form" enctype="multipart/form-data">
+<input type="file" id="hiddenFile" name="chooseFile" accept="image/*" class="absolute hidden">
+</form>
+</div>
+
+</div>
+
+
+<script src="./users_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./users_files/profile.js.download" type="text/javascript"></script>
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="edit">
+<button class="btn_close-modal">×</button>
+<img src="./users_files/profil.png" loading="lazy" class="w-3/6 mx-auto mb-10" alt="">
+<h1 class="flex justify-center modal__header">Uredite profil</h1>
+<div class="modal__pw">
+<label class="">Trenutna lozinka:</label>
+<input type="password" name="trenutnaLozinka" id="trenutnaLozinka">
+<label class="">Nova lozinka:</label>
+<input type="password" name="novaLozinka" id="novaLozinka">
+<label class="">Potvrdi lozinku:</label>
+<input type="password" name="potvrdioLozinku" id="potvrdioLozinku">
+</div>
+<p class="flex justify-center mt-6 mb-6 text-red-400" id="PorukaModala"></p>
+<button class="ml-[4.5rem] sm:ml-[2.5rem] md:ml-[4.5rem] lg:ml-[3.7rem] text-white bg-green-500 btn hover:bg-green-700 hover:text-white hover:transition focus:ring-cyan-200" onclick="if (!window.__cfRLUnblockHandlers) return false; updatePassword()">Potvrdi</button>
+<button class="text-white ml-[1rem] lg:ml-[3rem] bg-red-500 btn hover:bg-red-700 hover:text-white closeModal hover:transition focus:ring-cyan-200">Odustani</button>
+</div>
+
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="account">
+<button class="btn_close-modal">×</button>
+<img src="./users_files/novac.png" loading="lazy" class="w-2/5 mx-auto mb-10" alt="">
+<h1 class="flex justify-center modal__header">Načini plaćanja</h1>
+<div class="flex justify-center cursor-pointer">
+<img src="./users_files/paypal.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; togglePayPal()">
+</div>
+<div class="hidden paypalFrame">
+<div id="paypalForm" class="mt-5">
+<div class="flex justify-center">
+<div class="div"></div>
+<div class="ml-0 div">
+<label for="paypalAmount" class="font-bold text-white">Iznos uplate: </label><br>
+<input type="number" name="paypalAmount" id="paypalAmount" class="p-2 outline-none rounded-xl" placeholder="Unesite željeni iznos.." onkeyup="if (!window.__cfRLUnblockHandlers) return false; updateAmount()">
+</div>
+<div class="div"></div>
+<div class="div"></div>
+</div>
+<div id="smart-button-container" class="flex justify-center mx-auto mt-3">
+<div class="flex justify-center">
+<div id="paypal-payment-button"><div id="zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-unknown paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.335" style="height: 0px; transition: all 0.2s ease-in-out 0s;"><style nonce="">
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        min-height: 35px;
+                        min-width: 200px;
+                        max-width: 750px;
+                        font-size: 0;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > iframe.component-frame {
+                        z-index: 100;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > iframe.prerender-frame {
+                        transition: opacity .2s linear;
+                        z-index: 200;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > iframe.visible {
+                        opacity: 1;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > iframe.invisible {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    #zoid-paypal-buttons-uid_df3e23c27b_mja6mtc6mjq > .smart-menu {
+                        position: absolute;
+                        z-index: 300;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                </style><iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9udGVhbXJwLmNvbSJ9LCJtZXRhRGF0YSI6eyJ3aW5kb3dSZWYiOnsidHlwZSI6InBhcmVudCIsImRpc3RhbmNlIjowfX0sInJlZmVyZW5jZSI6eyJ0eXBlIjoicmF3IiwidmFsIjoie1widWlkXCI6XCJ6b2lkLXBheXBhbC1idXR0b25zLXVpZF9kZjNlMjNjMjdiX21qYTZtdGM2bWpxXCIsXCJjb250ZXh0XCI6XCJpZnJhbWVcIixcInRhZ1wiOlwicGF5cGFsLWJ1dHRvbnNcIixcImNoaWxkRG9tYWluTWF0Y2hcIjp7XCJfX3R5cGVfX1wiOlwicmVnZXhcIixcIl9fdmFsX19cIjpcIlxcXFwucGF5cGFsXFxcXC4oY29tfGNuKSg6XFxcXGQrKT8kXCJ9LFwidmVyc2lvblwiOlwiMTBfMV8wXCIsXCJwcm9wc1wiOntcInN0eWxlXCI6e1wiY3VzdG9tXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxhYmVsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxheW91dFwiOlwidmVydGljYWxcIixcImNvbG9yXCI6XCJibHVlXCIsXCJzaGFwZVwiOlwicGlsbFwiLFwidGFnbGluZVwiOmZhbHNlLFwiaGVpZ2h0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBlcmlvZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZW51UGxhY2VtZW50XCI6XCJiZWxvd1wifSxcImNyZWF0ZU9yZGVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDU1MTExMTA1MF9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwiY3JlYXRlT3JkZXJcIn19LFwib25BcHByb3ZlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZWIwZDEzNjliN19tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwib25BcHByb3ZlXCJ9fSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMTEyYjM4YWU0OF9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwib25DYW5jZWxcIn19LFwiY3NwTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZnVuZGluZ1NvdXJjZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJzdG9yYWdlU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF85OWU3YWIxNGM3X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMDYwMWZhNDEyN19tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJzZXNzaW9uU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8zN2JkMjE4MDNjX21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZGJiYWRhNjIxZF9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJjb21wb25lbnRzXCI6W1wiYnV0dG9uc1wiXSxcImxvY2FsZVwiOntcImNvdW50cnlcIjpcIlVTXCIsXCJsYW5nXCI6XCJlblwifSxcImNyZWF0ZUJpbGxpbmdBZ3JlZW1lbnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3JlYXRlU3Vic2NyaXB0aW9uXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ29tcGxldGVcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25TaGlwcGluZ0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9mZDcxMjUxY2E1X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFBvcHVwQnJpZGdlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfODkyYjhmYTY3M19tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwiZ2V0UG9wdXBCcmlkZ2VcIn19LFwib25Jbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNjEzYjRiYzVlY19tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwib25Jbml0XCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9hYTc5NDk0NjU1X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImNsaWVudElEXCI6XCJBWFFqYTdFbmFaSVEtMkQ3MU5yYU5KbTFPdkJyWklKNjQzX0EybTR3SWN3VVhtamgxZzg0YlUtV3gweTN3akU2b295Qno0LVR1X01tcVBOS1wiLFwiY2xpZW50QWNjZXNzVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGFydG5lckF0dHJpYnV0aW9uSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwiZW5hYmxlVGhyZWVEb21haW5TZWN1cmVcIjpmYWxzZSxcInNka0NvcnJlbGF0aW9uSURcIjpcImY4MTk5MDk3MWQ1OGNcIixcInN0b3JhZ2VJRFwiOlwidWlkXzNmYWU0MTk5YWJfbWppNm50eTZtZHFcIixcInNlc3Npb25JRFwiOlwidWlkX2YwNTc5MmExZDVfbWphNm10cTZtenVcIixcImJ1dHRvblNlc3Npb25JRFwiOlwidWlkXzEyNTE0ZWQ3YTFfbWphNm10YzZtanFcIixcImVuYWJsZVZhdWx0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImVudlwiOlwicHJvZHVjdGlvblwiLFwiYW1vdW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25TaXplXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwaVN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nRWxpZ2liaWxpdHlcIjp7XCJwYXlwYWxcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJwYXlsYXRlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJwcm9kdWN0c1wiOntcInBheUluM1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlJbjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9fX0sXCJjYXJkXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcImJyYW5kZWRcIjp0cnVlLFwiaW5zdGFsbG1lbnRzXCI6ZmFsc2UsXCJ2ZW5kb3JzXCI6e1widmlzYVwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwibWFzdGVyY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiYW1leFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiZGlzY292ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJoaXBlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJlbG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJqY2JcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX19LFwiZ3Vlc3RFbmFibGVkXCI6ZmFsc2V9LFwidmVubW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIml0YXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImNyZWRpdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYXBwbGVwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNlcGFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImlkZWFsXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJiYW5jb250YWN0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJnaXJvcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJlcHNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNvZm9ydFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXliYW5rXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwMjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInppbXBsZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIndlY2hhdHBheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicGF5dVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYmxpa1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwidHJ1c3RseVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwib3h4b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibWF4aW1hXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJib2xldG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b2JhbmNhcmlvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtZXJjYWRvcGFnb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXVsdGliYW5jb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9fSxcInBsYXRmb3JtXCI6XCJkZXNrdG9wXCIsXCJyZW1lbWJlcmVkXCI6W10sXCJleHBlcmltZW50XCI6e1wiZW5hYmxlVmVubW9cIjpmYWxzZSxcImVuYWJsZVZlbm1vQXBwTGFiZWxcIjpmYWxzZX0sXCJwYXltZW50UmVxdWVzdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmbG93XCI6XCJwdXJjaGFzZVwiLFwicmVtZW1iZXJcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80YmFiNTkwNjQ4X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJyZW1lbWJlclwifX0sXCJjdXJyZW5jeVwiOlwiVVNEXCIsXCJpbnRlbnRcIjpcImNhcHR1cmVcIixcImJ1eWVyQ291bnRyeVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjb21taXRcIjp0cnVlLFwidmF1bHRcIjpmYWxzZSxcImVuYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVGdW5kaW5nXCI6W1wiY3JlZGl0XCIsXCJjYXJkXCJdLFwiZGlzYWJsZUNhcmRcIjpbXSxcIm1lcmNoYW50SURcIjpbXSxcInJlbmRlcmVkQnV0dG9uc1wiOltcInBheXBhbFwiXSxcImNzcFwiOntcIm5vbmNlXCI6XCJcIn0sXCJub25jZVwiOlwiXCIsXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNWFlOGM5YmZiZl9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJ1c2VySURUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRNZXRhZGF0YUlEXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImRlYnVnXCI6ZmFsc2UsXCJ0ZXN0XCI6e1wiYWN0aW9uXCI6XCJjaGVja291dFwifSxcIndhbGxldFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJyYW5kZWRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlTdXBwb3J0XCI6ZmFsc2UsXCJzdXBwb3J0c1BvcHVwc1wiOnRydWUsXCJzdXBwb3J0ZWROYXRpdmVCcm93c2VyXCI6ZmFsc2UsXCJ1c2VyRXhwZXJpZW5jZUZsb3dcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZXhwZXJpZW5jZVwiOlwiXCIsXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWV9LFwiZXhwb3J0c1wiOntcImluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80M2EyMWJmZWE0X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJpbml0XCJ9fSxcImNsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMjM4NDE2NDhlYl9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwiY2xvc2U6Om1lbW9pemVkXCJ9fSxcImNoZWNrQ2xvc2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83ZmYzYTkzMjQ1X21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJjaGVja0Nsb3NlXCJ9fSxcInJlc2l6ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2M5MGFkODc2MzNfbWphNm10YzZtanFcIixcIm5hbWVcIjpcIk5lXCJ9fSxcIm9uRXJyb3JcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9iNWEzMmE0YjgxX21qYTZtdGM2bWpxXCIsXCJuYW1lXCI6XCJCZVwifX0sXCJzaG93XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYmI1ZmZhNzA5Zl9tamE2bXRjNm1qcVwiLFwibmFtZVwiOlwiaGVcIn19LFwiaGlkZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2U4NDc2YzJhZTFfbWphNm10YzZtanFcIixcIm5hbWVcIjpcImdlXCJ9fSxcImV4cG9ydFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzcyNTNmODgzZTZfbWphNm10YzZtanFcIixcIm5hbWVcIjpcImplXCJ9fX19In19__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-e70da691e7" class="component-frame visible" style="background-color: transparent; border: none;" src="./users_files/saved_resource.html"></iframe><div id="smart-menu" class="smart-menu"></div><div id="installments-modal" class="installments-modal"></div><iframe name="__detect_close_uid_88fb50bd13_mja6mtc6mjq__" style="display: none;" src="./users_files/saved_resource(1).html"></iframe></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6 cursor-pointer">
+<img src="./users_files/sms.png" class="w-80" loading="lazy" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleSMS()">
+</div>
+<iframe name="fortumo_payment" class="hidden fortumoFrame" src="./users_files/0a5d4a4ea29404b4cd50c777ddbb0136.html" style="height:580px;width:380px; margin: 5% auto;"></iframe> <script type="text/javascript">
+        const toggleSMS = () => { document.querySelector('.fortumoFrame').classList.toggle('hidden'); } 
+        const togglePayPal = () => { document.querySelector('.paypalFrame').classList.toggle('hidden'); } 
+        let payAmount = '1'; 
+        const updateAmount = () => { 
+            const vrijednost = document.querySelector('#paypalAmount').value;
+            if(vrijednost.length > 0) { payAmount = vrijednost; } else { payAmount = '0'; } 
+        }
+    </script>
+<div class="px-6 mt-6 text-sm text-green-500 sm:text-md">
+<p><b>NAPOMENA:</b> Nako izvršenog plaćanja novac se automatski postavlja na Vaš balans!</p>
+</div>
+</div>
+<script src="./users_files/sidebar.js.download" type="text/javascript"></script>
+<script src="./users_files/modal.js.download" type="text/javascript"></script>
+<script src="./users_files/notify.js.download" type="text/javascript"></script>
+<script src="./users_files/js" type="text/javascript" data-uid-auto="uid_tjrjnlpxbksdhsoismaignhiqewrfi"></script>
+<script src="./users_files/paypal.js.download" type="text/javascript"></script>
+
+
+</body></html>

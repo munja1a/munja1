@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://force-roleplay.ml/panel/shop -->
+<html lang="hr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./shop_files/output.css">
+<link rel="shortcut icon" href="https://force-roleplay.ml/src/img/favicon.ico" type="image/x-icon">
+<title>NTeam UCP - Shop</title>
+<script src="./shop_files/pptm.js.download" id="xo-pptm" async=""></script></head>
+<body class="bg-nUcpBack">
+<div>
+<nav class="fixed z-30 w-full border-b bg-nCardColor border-nBackground">
+<input type="hidden" id="inputNotifikacije" value="WL je trenutno zatvorena, možete kupiti vanrednu"><div id="obavijest" class="items-center justify-center hidden w-full h-8 text-xs sm:text-lg" style=" 
+                    background-color: rgb(59 130 246);
+                ">
+<p class="font-bold text-white font-poppins">WL je trenutno zatvorena, možete kupiti vanrednu <a class="underline cursor-pointer" href="https://force-roleplay.ml/panel/shop">ovdje</a>.</p>
+<svg xmlns="http://www.w3.org/2000/svg" id="hideNotification" class="w-6 h-6 ml-2 text-white cursor-pointer sm:ml-4" fill="#fff" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</div> <div class="px-3 py-3 lg:px-5 lg:pl-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center justify-start">
+<button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="p-2 mr-2 text-gray-600 rounded cursor-pointer lg:hidden hover:text-white hover:bg-nUcpBack focus:bg-nUcpBack focus:ring-2 focus:ring-nUcpBack">
+<svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+</svg>
+<svg id="toggleSidebarMobileClose" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<a href="https://force-roleplay.ml/panel/index" class="text-xl font-bold flex items-center lg:ml-2.5">
+<img src="./shop_files/navlogo.png" loading="lazy" class="h-12 mr-2" alt="NTeam Logo">
+</a>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="hidden lg:block lg:pl-32">
+<label for="topbar-search" class="sr-only">Pretraga</label>
+<div class="relative mt-1 lg:w-64">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="topbar-search" class="bg-gray-50 border border-gray-300 text-black sm:text-sm rounded-xl focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</div>
+<div class="flex items-center">
+<button id="toggleSidebarMobileSearch" type="button" class="p-2 text-gray-500 rounded-lg lg:hidden">
+<span class="sr-only">Pretraga</span>
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+</svg>
+</button>
+<user>
+<a data-target="#account" class="cursor-pointer hidden bg-nUcpBack md:text-lg rounded-3xl sm:inline-flex ml-0 text-white text-[15px] sm:px-[0.55rem] md:px-5 py-2.5 text-center items-center mr-3">
+<span class="font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold" id="balans">&nbsp;
+0 €</span>
+</a>
+</user>
+</div>
+</div>
+</div>
+</nav>
+<div class="flex pt-16 overflow-hidden bg-nCardColor" id="sidebar1">
+<aside id="sidebar" class="fixed top-0 left-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 duration-75 lg:flex transition-width" aria-label="Sidebar">
+<div class="relative flex flex-col flex-1 min-h-0 pt-0 bg-nCardColor">
+<div class="flex flex-col flex-1 pt-5 pb-4 overflow-y-auto" id="sidebar1">
+<div class="flex-1 px-3 pt-6 bg-nCardColor" id="sidebarElement">
+<ul class="pb-2 space-y-2">
+<li>
+<form action="https://force-roleplay.ml/panel/user" method="POST" class="lg:hidden">
+<label for="mobile-search" class="sr-only">Pretraga</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+</path>
+</svg>
+</div>
+<input type="text" name="pretraga" id="mobile-search" class="bg-gray-50 border border-gray-300 text-black text-sm rounded-xl focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Pretraga">
+</div>
+</form>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/profile" class="inline-flex items-center mt-4 mb-4 ml-6 font-bold text-center text-white text-md">
+<img class="object-cover w-10 h-10 mr-4 rounded-full" loading="lazy" onerror="this.src=&#39;../src/img/logo.png&#39;" src="./shop_files/4b2be944217e7678038b60e20438dee4.jpg" alt="Profile image">
+ko jeto </a>
+</li>
+<li>
+<a data-target="#account" class="cursor-pointer bg-nUcpBack rounded-3xl ml-4 mb-4 text-white text-md px-2 py-2.5 text-center items-center mr-3 sm:hidden">
+<span class="font-medium text-nPeriwinkle">Balans računa:</span> <span class="font-bold">&nbsp;
+0 $</span>
+</a>
+</li>
+<a href="https://force-roleplay.ml/panel/index" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+</svg>
+<span class="ml-3 font-bold">Početna</span>
+</a>
+
+<li>
+<a href="https://force-roleplay.ml/panel/users" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 18 18">
+<path fill-rule="evenodd" d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-2 font-bold whitespace-nowrap">Lista korisnika</span>
+</a>
+</li>
+ <li>
+<a href="https://force-roleplay.ml/panel/shop" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Kupovina</span>
+<span class="inline-flex items-center justify-center px-2 ml-3 text-sm font-medium text-white bg-red-500 rounded-full">Shop</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/topdonators" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Top Donatori</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/whitelist" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 transition duration-75 text-nPeriwinkle group-hover:text-white" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Whitelist</span>
+</a>
+</li>
+<li>
+<a href="https://force-roleplay.ml/panel/actions/Auth/Logout?logout" class="flex items-center p-2 text-base font-normal text-white rounded-lg hover:bg-nUcpBack group ">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 ml-1 transition duration-75 text-nPeriwinkle group-hover:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+<path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+</svg>
+<span class="flex-1 ml-3 font-bold whitespace-nowrap">Odjava</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</aside>
+<div id="main-content" class="relative w-full h-full bg-nUcpBack lg:ml-64">
+<main class="px-4">
+<p class="mt-12 mb-2 text-sm font-bold text-gray-400 font-poppins"><i class="mr-2 far fa-file-alt"></i> User Control Panel &gt;
+Shop</p>
+<div class="p-6 rounded-lg bg-nCardColor">
+<div class="w-full h-full">
+<dh-component>
+<button id="menu-btn" class="block hamburger focus:outline-none md:hidden">
+<span class="hamburger-top"></span>
+<span class="hamburger-middle"></span>
+<span class="hamburger-bottom"></span>
+</button>
+<div class="flex flex-no-wrap">
+<div style="min-height: 716px" id="sidebarNav" class="flex-col justify-between hidden w-64 rounded-lg shadow bg-nUcpBack sm:relative md:h-full md:flex">
+<div class="px-6">
+<div class="flex items-center justify-center mx-auto mt-3 sm:w-64 md:w-52 lg:w-full border-nPeriwinkle">
+<img src="./shop_files/SHOPnteam.png" class="flex justify-center" loading="lazy" alt="NTeam Shop logo">
+</div>
+<ul class="mt-12">
+<li class="flex items-center justify-between w-full p-2 mb-2 text-gray-300 border-b rounded-lg cursor-pointer menu border-nPeriwinkle bg-nUcpBack hover:bg-nCardColor" onclick="if (!window.__cfRLUnblockHandlers) return false; changeCategory(1)">
+<a href="javascript:void(0)" class="flex items-center focus:outline-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="ml-2 text-sm font-bold uppercase ">Priority</span>
+</a>
+<div class="flex items-center justify-center px-3 py-1 text-xs bg-white rounded-lg text-nBackground">
+2</div>
+</li>
+<li class="flex items-center justify-between w-full p-2 mb-2 text-gray-300 border-b rounded-lg cursor-pointer menu border-nPeriwinkle bg-nUcpBack hover:bg-nCardColor " onclick="if (!window.__cfRLUnblockHandlers) return false; changeCategory(2)">
+<a href="javascript:void(0)" class="flex items-center focus:outline-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+</svg>
+<span class="ml-2 text-sm font-bold uppercase">VIP</span>
+</a>
+<div class="flex items-center justify-center px-3 py-1 text-xs bg-white rounded-lg text-nBackground">
+3</div>
+</li>
+<li class="flex items-center justify-between w-full p-2 mb-2 text-gray-300 border-b rounded-lg cursor-pointer menu border-nPeriwinkle bg-nUcpBack hover:bg-nCardColor " onclick="if (!window.__cfRLUnblockHandlers) return false; changeCategory(3)">
+<a href="javascript:void(0)" class="flex items-center focus:outline-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M10.496 2.132a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1zm3 1a1 1 0 012 0v3a1 1 0 11-2 0v-3zm5-1a1 1 0 00-1 1v3a1 1 0 102 0v-3a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+</svg>
+<span class="ml-2 text-sm font-bold uppercase">Reklame i
+bilbordi</span>
+</a>
+<div class="flex items-center justify-center px-3 py-1 text-xs bg-white rounded-lg text-nBackground">
+1</div>
+</li>
+<li class="flex items-center justify-between w-full p-2 mb-2 text-gray-300 border-b rounded-lg cursor-pointer menu border-nPeriwinkle bg-nUcpBack hover:bg-nCardColor " onclick="if (!window.__cfRLUnblockHandlers) return false; changeCategory(4)">
+<a href="javascript:void(0)" class="flex items-center focus:outline-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 20 20" fill="currentColor">
+<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+</svg>
+<span class="ml-2 text-sm font-bold uppercase">MLO</span>
+</a>
+<div class="flex items-center justify-center px-3 py-1 text-xs bg-white rounded-lg text-nBackground">
+1</div>
+</li>
+<li class="flex items-center justify-between w-full p-2 mb-2 text-gray-300 border-b rounded-lg cursor-pointer menu border-nPeriwinkle bg-nUcpBack hover:bg-nCardColor " onclick="if (!window.__cfRLUnblockHandlers) return false; changeCategory(5)">
+<a href="javascript:void(0)" class="flex items-center focus:outline-none">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12" viewBox="0 0 20 20" fill="currentColor">
+<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+</svg>
+<span class="ml-2 text-sm font-bold uppercase">Vanredna
+whitelista</span>
+</a>
+<div class="flex items-center justify-center px-3 py-1 text-xs bg-white rounded-lg text-nBackground">
+1</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="shop-menu" class="container mx-auto md:w-4/5">
+<div class="rounded">
+<div class="grid grid-cols-1 grid-rows-3 bg-nCardColor insertCards md:grid-cols-1 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-1">
+                        <div class="mt-5 ml-4 text-white rounded-lg shadow-xl kartica bg-nUcpBack lg:mt-0">
+                            <img src="./shop_files/jetpack.png" class="w-full rounded-t-lg h-72 lg:h-96" alt="Jetpack Priority NTEAM RP">
+                            <h2 class="pt-3 pl-5 text-2xl font-bold text-white">Jetpack Priority</h2>
+                            <div class="grid grid-cols-1 grid-rows-1 px-3">
+                                <p class="flex items-center pt-2 pl-2 text-xl font-bold text-white opacity-60">
+                                    9.99 €
+                                </p>
+                                <div class="div"></div>
+                                <div class="div"></div> 
+                            </div>
+                            <p class="pt-6 pb-12 pl-4 text-gray-400">• Prioritet omogućava ulazak na server prije ostalih igrača u redu čekanja.</p>
+                            <button class="w-full px-6 py-2 font-bold transition-all ease-in rounded-b-lg bg-nGradient2 hover:bg-nteam" type="submit" data-target="#submit" onclick="openModal(&#39;Jetpack Priority&#39;)">Kupi</button>
+                        </div> 
+                    
+                        <div class="mt-5 ml-4 text-white rounded-lg shadow-xl kartica bg-nUcpBack lg:mt-0">
+                            <img src="./shop_files/hydra.png" class="w-full rounded-t-lg h-72 lg:h-96" alt="Jetpack Priority NTEAM RP">
+                            <h2 class="pt-3 pl-5 text-2xl font-bold text-white">Hydra Priority</h2>
+                            <div class="grid grid-cols-1 grid-rows-1 px-3">
+                                <p class="flex items-center pt-2 pl-2 text-xl font-bold text-white opacity-60">
+                                    22.99 €
+                                </p>
+                                <div class="div"></div>
+                                <div class="div"></div> 
+                            </div>
+                            <p class="pt-6 pb-12 pl-4 text-gray-400">• Prioritet omogućava ulazak na server prije ostalih igrača u redu čekanja.</p>
+                            <button class="w-full px-6 py-2 font-bold transition-all ease-in rounded-b-lg bg-nGradient2 hover:bg-nteam" type="submit" data-target="#submit" onclick="openModal(&#39;Hydra Priority&#39;)">Kupi</button>
+                        </div> 
+                    </div>
+ </div>
+</div>
+</div>
+</dh-component>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="submit">
+<button class="btn_close-modal">×</button>
+<img src="./shop_files/submit.png" loading="lazy" class="w-3/6 mx-auto mb-10" alt="">
+<h1 class="flex justify-center modal__header" id="potvrdaText">Da li želite potvrditi kupovinu?</h1>
+<div class="modal__form">
+<button class="text-white bg-green-500 btn hover:bg-green-700 hover:text-white hover:transition focus:ring-cyan-200" value="Jetpack Priority" id="potvrdiButton" onclick="if (!window.__cfRLUnblockHandlers) return false; confirmBuy()">Potvrdi</button>
+<button class="text-white bg-red-500 btn closeModal hover:bg-red-700 hover:text-white hover:transition focus:ring-cyan-200">Odustani</button>
+</div>
+</div>
+<div class="hidden overlay"></div>
+<div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="account">
+<button class="btn_close-modal">×</button>
+<img src="./shop_files/novac.png" loading="lazy" class="mx-auto mb-10 w-1/1 sm:w-2/5" alt="">
+<h1 class="flex justify-center modal__header">Načini plaćanja</h1>
+<div class="flex justify-center cursor-pointer">
+<img src="./shop_files/paypal.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; togglePayPal()">
+</div>
+<div class="hidden paypalFrame">
+<div id="paypalForm" class="mt-5">
+<div class="flex justify-center">
+<div class="div"></div>
+<div class="ml-0 div">
+<label for="paypalAmount" class="font-bold text-white">Iznos uplate: </label><br>
+<input type="number" name="paypalAmount" id="paypalAmount" class="p-2 outline-none rounded-xl" placeholder="Unesite željeni iznos.." onkeyup="if (!window.__cfRLUnblockHandlers) return false; updateAmount()">
+</div>
+<div class="div"></div>
+<div class="div"></div>
+</div>
+<div id="smart-button-container" class="flex justify-center mx-auto mt-3">
+<div classs="flex justify-center">
+<div id="paypal-payment-button"><div id="zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu" class="paypal-buttons paypal-buttons-context-iframe paypal-buttons-label-unknown paypal-buttons-layout-vertical" data-paypal-smart-button-version="5.0.335" style="height: 0px; transition: all 0.2s ease-in-out 0s;"><style nonce="">
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu {
+                        position: relative;
+                        display: inline-block;
+                        width: 100%;
+                        min-height: 35px;
+                        min-width: 200px;
+                        max-width: 750px;
+                        font-size: 0;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > iframe.component-frame {
+                        z-index: 100;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > iframe.prerender-frame {
+                        transition: opacity .2s linear;
+                        z-index: 200;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > iframe.visible {
+                        opacity: 1;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > iframe.invisible {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+
+                    #zoid-paypal-buttons-uid_9131fc5a2d_mja6mtu6ndu > .smart-menu {
+                        position: absolute;
+                        z-index: 300;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+                </style><iframe allowtransparency="true" name="__zoid__paypal_buttons__eyJzZW5kZXIiOnsiZG9tYWluIjoiaHR0cHM6Ly9udGVhbXJwLmNvbSJ9LCJtZXRhRGF0YSI6eyJ3aW5kb3dSZWYiOnsidHlwZSI6InBhcmVudCIsImRpc3RhbmNlIjowfX0sInJlZmVyZW5jZSI6eyJ0eXBlIjoicmF3IiwidmFsIjoie1widWlkXCI6XCJ6b2lkLXBheXBhbC1idXR0b25zLXVpZF85MTMxZmM1YTJkX21qYTZtdHU2bmR1XCIsXCJjb250ZXh0XCI6XCJpZnJhbWVcIixcInRhZ1wiOlwicGF5cGFsLWJ1dHRvbnNcIixcImNoaWxkRG9tYWluTWF0Y2hcIjp7XCJfX3R5cGVfX1wiOlwicmVnZXhcIixcIl9fdmFsX19cIjpcIlxcXFwucGF5cGFsXFxcXC4oY29tfGNuKSg6XFxcXGQrKT8kXCJ9LFwidmVyc2lvblwiOlwiMTBfMV8wXCIsXCJwcm9wc1wiOntcInN0eWxlXCI6e1wiY3VzdG9tXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxhYmVsXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImxheW91dFwiOlwidmVydGljYWxcIixcImNvbG9yXCI6XCJibHVlXCIsXCJzaGFwZVwiOlwicGlsbFwiLFwidGFnbGluZVwiOmZhbHNlLFwiaGVpZ2h0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInBlcmlvZFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJtZW51UGxhY2VtZW50XCI6XCJiZWxvd1wifSxcImNyZWF0ZU9yZGVyXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMjM3NGZhODgwMF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwiY3JlYXRlT3JkZXJcIn19LFwib25BcHByb3ZlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMzhlYTg4NmQ3MF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwib25BcHByb3ZlXCJ9fSxcIm9uQ2FuY2VsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfYzNjODYwMTc3NF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwib25DYW5jZWxcIn19LFwiY3NwTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZnVuZGluZ1NvdXJjZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJzdG9yYWdlU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF80NjMyZmY3YzZhX21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZGQyZTYzZTEwYV9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJzZXNzaW9uU3RhdGVcIjp7XCJnZXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF8yZDEyMjliMjRmX21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJnZXRcIn19LFwic2V0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZGQzZWEyODRjM19tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwic2V0XCJ9fX0sXCJjb21wb25lbnRzXCI6W1wiYnV0dG9uc1wiXSxcImxvY2FsZVwiOntcImNvdW50cnlcIjpcIlVTXCIsXCJsYW5nXCI6XCJlblwifSxcImNyZWF0ZUJpbGxpbmdBZ3JlZW1lbnRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiY3JlYXRlU3Vic2NyaXB0aW9uXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcIm9uQ29tcGxldGVcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwib25TaGlwcGluZ0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nQWRkcmVzc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvblNoaXBwaW5nT3B0aW9uc0NoYW5nZVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJvbkNsaWNrXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImdldFByZXJlbmRlckRldGFpbHNcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9hZmQyZTgyNTI0X21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJnZXRQcmVyZW5kZXJEZXRhaWxzXCJ9fSxcImdldFBvcHVwQnJpZGdlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfZDhjM2ZmOTQyZl9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwiZ2V0UG9wdXBCcmlkZ2VcIn19LFwib25Jbml0XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNjg4OWM5ZmU5NF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwib25Jbml0XCJ9fSxcImdldFF1ZXJpZWRFbGlnaWJsZUZ1bmRpbmdcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83YjQyMDRkNzUyX21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJnZXRRdWVyaWVkRWxpZ2libGVGdW5kaW5nXCJ9fSxcImNsaWVudElEXCI6XCJBWFFqYTdFbmFaSVEtMkQ3MU5yYU5KbTFPdkJyWklKNjQzX0EybTR3SWN3VVhtamgxZzg0YlUtV3gweTN3akU2b295Qno0LVR1X01tcVBOS1wiLFwiY2xpZW50QWNjZXNzVG9rZW5cIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGFydG5lckF0dHJpYnV0aW9uSURcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwibWVyY2hhbnRSZXF1ZXN0ZWRQb3B1cHNEaXNhYmxlZFwiOmZhbHNlLFwiZW5hYmxlVGhyZWVEb21haW5TZWN1cmVcIjpmYWxzZSxcInNka0NvcnJlbGF0aW9uSURcIjpcImY4MTk5MDk3MWQ1OGNcIixcInN0b3JhZ2VJRFwiOlwidWlkXzNmYWU0MTk5YWJfbWppNm50eTZtZHFcIixcInNlc3Npb25JRFwiOlwidWlkX2YwNTc5MmExZDVfbWphNm10cTZtenVcIixcImJ1dHRvblNlc3Npb25JRFwiOlwidWlkXzM3YWU0ODQzMGJfbWphNm10dTZuZHVcIixcImVuYWJsZVZhdWx0XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImVudlwiOlwicHJvZHVjdGlvblwiLFwiYW1vdW50XCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcInN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJidXR0b25TaXplXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImFwaVN0YWdlSG9zdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmdW5kaW5nRWxpZ2liaWxpdHlcIjp7XCJwYXlwYWxcIjp7XCJlbGlnaWJsZVwiOnRydWUsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJwYXlsYXRlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJwcm9kdWN0c1wiOntcInBheUluM1wiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXJpYW50XCI6bnVsbH0sXCJwYXlJbjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9LFwicGF5bGF0ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmFyaWFudFwiOm51bGx9fX0sXCJjYXJkXCI6e1wiZWxpZ2libGVcIjpmYWxzZSxcImJyYW5kZWRcIjp0cnVlLFwiaW5zdGFsbG1lbnRzXCI6ZmFsc2UsXCJ2ZW5kb3JzXCI6e1widmlzYVwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwibWFzdGVyY2FyZFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiYW1leFwiOntcImVsaWdpYmxlXCI6dHJ1ZSxcInZhdWx0YWJsZVwiOnRydWV9LFwiZGlzY292ZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJoaXBlclwiOntcImVsaWdpYmxlXCI6ZmFsc2UsXCJ2YXVsdGFibGVcIjpmYWxzZX0sXCJlbG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX0sXCJqY2JcIjp7XCJlbGlnaWJsZVwiOmZhbHNlLFwidmF1bHRhYmxlXCI6dHJ1ZX19LFwiZ3Vlc3RFbmFibGVkXCI6ZmFsc2V9LFwidmVubW9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIml0YXVcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImNyZWRpdFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYXBwbGVwYXlcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNlcGFcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImlkZWFsXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJiYW5jb250YWN0XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJnaXJvcGF5XCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJlcHNcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInNvZm9ydFwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXliYW5rXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJwMjRcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcInppbXBsZXJcIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcIndlY2hhdHBheVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwicGF5dVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwiYmxpa1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwidHJ1c3RseVwiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwib3h4b1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibWF4aW1hXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJib2xldG9cIjp7XCJlbGlnaWJsZVwiOmZhbHNlfSxcImJvbGV0b2JhbmNhcmlvXCI6e1wiZWxpZ2libGVcIjpmYWxzZX0sXCJtZXJjYWRvcGFnb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9LFwibXVsdGliYW5jb1wiOntcImVsaWdpYmxlXCI6ZmFsc2V9fSxcInBsYXRmb3JtXCI6XCJkZXNrdG9wXCIsXCJyZW1lbWJlcmVkXCI6W10sXCJleHBlcmltZW50XCI6e1wiZW5hYmxlVmVubW9cIjpmYWxzZSxcImVuYWJsZVZlbm1vQXBwTGFiZWxcIjpmYWxzZX0sXCJwYXltZW50UmVxdWVzdFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJmbG93XCI6XCJwdXJjaGFzZVwiLFwicmVtZW1iZXJcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9kZWJjYzIwODIyX21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJyZW1lbWJlclwifX0sXCJjdXJyZW5jeVwiOlwiVVNEXCIsXCJpbnRlbnRcIjpcImNhcHR1cmVcIixcImJ1eWVyQ291bnRyeVwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjb21taXRcIjp0cnVlLFwidmF1bHRcIjpmYWxzZSxcImVuYWJsZUZ1bmRpbmdcIjpbXSxcImRpc2FibGVGdW5kaW5nXCI6W1wiY3JlZGl0XCIsXCJjYXJkXCJdLFwiZGlzYWJsZUNhcmRcIjpbXSxcIm1lcmNoYW50SURcIjpbXSxcInJlbmRlcmVkQnV0dG9uc1wiOltcInBheXBhbFwiXSxcImNzcFwiOntcIm5vbmNlXCI6XCJcIn0sXCJub25jZVwiOlwiXCIsXCJnZXRQYWdlVXJsXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfMTIxNmE3OGFhZF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwiZ2V0UGFnZVVybFwifX0sXCJ1c2VySURUb2tlblwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJjbGllbnRNZXRhZGF0YUlEXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImRlYnVnXCI6ZmFsc2UsXCJ0ZXN0XCI6e1wiYWN0aW9uXCI6XCJjaGVja291dFwifSxcIndhbGxldFwiOntcIl9fdHlwZV9fXCI6XCJ1bmRlZmluZWRcIn0sXCJwYXltZW50TWV0aG9kTm9uY2VcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwicGF5bWVudE1ldGhvZFRva2VuXCI6e1wiX190eXBlX19cIjpcInVuZGVmaW5lZFwifSxcImJyYW5kZWRcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlTdXBwb3J0XCI6ZmFsc2UsXCJzdXBwb3J0c1BvcHVwc1wiOnRydWUsXCJzdXBwb3J0ZWROYXRpdmVCcm93c2VyXCI6ZmFsc2UsXCJ1c2VyRXhwZXJpZW5jZUZsb3dcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiYXBwbGVQYXlcIjp7XCJfX3R5cGVfX1wiOlwidW5kZWZpbmVkXCJ9LFwiZXhwZXJpZW5jZVwiOlwiXCIsXCJhbGxvd0JpbGxpbmdQYXltZW50c1wiOnRydWV9LFwiZXhwb3J0c1wiOntcImluaXRcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9kNzA0MWVkYjNiX21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJpbml0XCJ9fSxcImNsb3NlXCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfNzhkMGMyNTBjZF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwiY2xvc2U6Om1lbW9pemVkXCJ9fSxcImNoZWNrQ2xvc2VcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF9jNTBkZDQxNWM1X21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJjaGVja0Nsb3NlXCJ9fSxcInJlc2l6ZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2NlODE1MzhjNGZfbWphNm10dTZuZHVcIixcIm5hbWVcIjpcIk5lXCJ9fSxcIm9uRXJyb3JcIjp7XCJfX3R5cGVfX1wiOlwiY3Jvc3NfZG9tYWluX2Z1bmN0aW9uXCIsXCJfX3ZhbF9fXCI6e1wiaWRcIjpcInVpZF83ZjhjZjhiZjg1X21qYTZtdHU2bmR1XCIsXCJuYW1lXCI6XCJCZVwifX0sXCJzaG93XCI6e1wiX190eXBlX19cIjpcImNyb3NzX2RvbWFpbl9mdW5jdGlvblwiLFwiX192YWxfX1wiOntcImlkXCI6XCJ1aWRfY2ZiNTU4M2YxMF9tamE2bXR1Nm5kdVwiLFwibmFtZVwiOlwiaGVcIn19LFwiaGlkZVwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkXzJlZGU0ODFkMWNfbWphNm10dTZuZHVcIixcIm5hbWVcIjpcImdlXCJ9fSxcImV4cG9ydFwiOntcIl9fdHlwZV9fXCI6XCJjcm9zc19kb21haW5fZnVuY3Rpb25cIixcIl9fdmFsX19cIjp7XCJpZFwiOlwidWlkX2UwYTY5YzYwMjFfbWphNm10dTZuZHVcIixcIm5hbWVcIjpcImplXCJ9fX19In19__" title="PayPal" allowpaymentrequest="allowpaymentrequest" scrolling="no" id="jsx-iframe-66c1bebfd3" class="component-frame visible" style="background-color: transparent; border: none;" src="./shop_files/saved_resource.html"></iframe><div id="smart-menu" class="smart-menu"></div><div id="installments-modal" class="installments-modal"></div><iframe name="__detect_close_uid_7bf379ca1e_mja6mtu6ndu__" style="display: none;" src="./shop_files/saved_resource(1).html"></iframe></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-6 cursor-pointer">
+<img src="./shop_files/sms.png" loading="lazy" class="w-80" alt="paypal payments" onclick="if (!window.__cfRLUnblockHandlers) return false; toggleSMS()">
+</div>
+<iframe name="fortumo_payment" class="hidden fortumoFrame" src="./shop_files/0a5d4a4ea29404b4cd50c777ddbb0136.html" style="height:580px;width:380px; margin: 5% auto;"></iframe> <script type="text/javascript">
+            const toggleSMS = () => { document.querySelector('.fortumoFrame').classList.toggle('hidden'); } 
+            const togglePayPal = () => { document.querySelector('.paypalFrame').classList.toggle('hidden'); } 
+            let payAmount = '1'; 
+            const updateAmount = () => { 
+                const vrijednost = document.querySelector('#paypalAmount').value;
+                if(vrijednost.length > 0) { payAmount = vrijednost; } else { payAmount = '0'; } 
+            }
+        </script>
+<div class="px-6 mt-6 text-sm text-green-500 sm:text-md">
+<p><b>NAPOMENA:</b> Nako izvršenog plaanja novac se automatski postavlja na Vaš balans!</p>
+</div>
+</div>
+<script src="./shop_files/jquery.min.js.download" type="text/javascript"></script>
+<script src="./shop_files/shop.js.download" type="text/javascript"></script>
+<script src="./shop_files/modal.js.download" type="text/javascript"></script>
+<script src="./shop_files/notify.js.download" type="text/javascript"></script>
+<script src="./shop_files/sidebar.js.download" type="text/javascript"></script>
+<script src="./shop_files/js" type="text/javascript" data-uid-auto="uid_tjrjnlpxbksdhsoismaignhiqewrfi"></script>
+<script src="./shop_files/paypal.js.download" type="text/javascript"></script>
+
+
+</body></html>

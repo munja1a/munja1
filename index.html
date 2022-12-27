@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Sorry nedime lepicu -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTeam Community</title>
+    <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="dist/solid.css">
+    <link rel="stylesheet" href="dist/all.css">
+    <script defer src="js/all.js" type="9657d428943c0c1e93f94a57-text/javascript"></script>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css">
+</head>
+
+<body class="bg-gradient-to-r from-nMidnightBlue to-nBackground">
+
+    <nav class="relative p-6 lg:mx-auto lg:container">
+        <div class="flex items-center justify-between">
+            <div class="w-48 md:w-48 lg:w-48">
+                <a href="index">
+<img src="././src/img/navlogo.png" class="cursor-pointer" alt="Navbar logo">
+</a>
+            </div>
+            <div class="hidden space-x-1 md:sm:space-x-4 md:flex lg:space-x-6">
+                <a href="index.html" class="pt-3 text-xs font-bold text-white uppercase font-poppins hover:text-nPeriwinkle hover:transition-all hover:ease-out hover:border-t-4 hover:border-white-500 md:text-xs lg:text-md xl:text-base">Početna</a>
+                <a href="./panel/login.html" class="pt-3 text-xs font-bold text-white uppercase font-poppins hover:text-nPeriwinkle hover:transition-all hover:ease-out hover:border-t-4 border-white-500 md:text-xs lg:text-md xl:text-base">User
+CP</a>
+                <a href="https://discord.gg/fiveleaks" target=”_blank” class="pt-3 text-xs font-bold text-white uppercase font-poppins hover:text-nPeriwinkle hover:transition-all hover:ease-out hover:border-t-4 hover:border-white-500 md:text-xs lg:text-md xl:text-base">Discord</a>
+                <a href="#" class="pt-3 text-xs font-bold text-white uppercase font-poppins hover:text-nPeriwinkle hover:transition-all hover:ease-out hover:border-t-4 hover:border-white-500 md:text-xs lg:text-md xl:text-base">Pravila</a>
+                <a href="#" class="pt-3 text-xs font-bold text-white uppercase font-poppins hover:text-nPeriwinkle hover:transition-all hover:ease-out hover:border-t-4 hover:border-white-500 md:text-xs lg:text-md xl:text-base">
+<i class="fas fa-user-friends"></i>
+260 whitelisted igrača</a>
+                <a href="./panel/login.html" class="hidden p-3 text-xs font-bold text-white uppercase rounded-lg shadow-xl font-poppins animate__animated animate__pulse animate__infinite bg-gradient-to-r from-nteam to-nGradient2 hover:bg-gradient-to-br hover:transition-all hover:ease-in md:flex md:text-xs lg:text-md xl:text-base">
+Započni igru<i class="fas fa-sign-in-alt pt-1 pl-2 md:pt-0.5"></i>
+</a>
+            </div>
+
+            <button id="menu-btn" class="block hamburger md:hidden focus:outline-none">
+<span class="hamburger-top"></span>
+<span class="hamburger-middle"></span>
+<span class="hamburger-bottom"></span>
+</button>
+        </div>
+
+        <div class="md:hidden">
+            <div id="menu" class="relative flex-col items-center self-end hidden py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-0.5 right-6 drop-shadow-md">
+                <a href="index.html" class="font-bold uppercase font-oxanium">Početna</a>
+                <a href="./panel/login.html" class="font-bold uppercase font-oxanium">User CP</a>
+                <a href="https://discord.gg/fiveleaks" class="font-bold uppercase font-oxanium">Discord</a>
+                <a href="pravila" class="font-bold uppercase font-oxanium">Pravila</a>
+                <a href="#" class="font-bold uppercase font-oxanium"><i class="fas fa-users"></i>
+260 whitelisted igrača</a>
+                <a href="./panel/login.html" class="font-bold uppercase font-oxanium">Započni igru</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <header>
+        <section id="header">
+            <div id="hero" class="relative z-0 pt-20 pb-24 text-gray-100 md:pt-24">
+                <div class="particle">
+                    <div class="absolute text-indigo-700 scroll-rotate opacity-60" style="right:9%;bottom: 72%;">
+                        <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute scroll-rotate opacity-60 text-nteam" style="right:12%;bottom: 30%;">
+                        <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute hidden scroll-rotate opacity-60 text-nPeriwinkle lg:block" style="right:22%;bottom: 55%;">
+                        <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute hidden scroll-rotate opacity-60 text-nPeriwinkle lg:block" style="left:40%;top: 20%;">
+                        <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+ <path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute text-indigo-700 scroll-rotate opacity-60" style="left:60%;bottom: 20%;">
+                        <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute scroll-rotate opacity-60 text-nteam" style="left:20%;bottom: 60%;">
+                        <svg class="bi bi-bounding-box-circles" width="1.5rem" height="1.5rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute text-indigo-700 scroll-rotate opacity-60" style="left:12%;bottom: 30%;">
+                        <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                    <div class="absolute scroll-rotate opacity-60 text-nteam" style="left:6%;bottom:75%;">
+                        <svg class="bi bi-bounding-box-circles" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" d="M12.5 2h-9V1h9v1zm-10 1.5v9h-1v-9h1zm11 9v-9h1v9h-1zM3.5 14h9v1h-9v-1z" clip-rule="evenodd"></path>
+<path fill-rule="evenodd" d="M14 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zM2 3a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4zm0 11a1 1 0 100-2 1 1 0 000 2zm0 1a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+</svg>
+                    </div>
+                </div>
+                <div class="container px-2 mx-auto xl:max-w-7xl">
+                    <div class="flex flex-row flex-wrap items-center justify-center">
+                        <div class="z-10 flex-shrink w-full max-w-full lg:w-1/2 xl:mr-auto">
+                            <div class="lg:ltr:text-left lg:rtl:text-right">
+                                <h1 class="mb-4 text-5xl font-bold leading-normal text-white capitalize font-poppins" id="headerText">Join our community, <span class="text-indigo-500" data-toggle="typed"></span><br> become a part of family.</h1>
+                                <p class="pb-2 mx-auto mb-12 text-2xl font-light leading-relaxed text-gray-100" id="paragrafText">Zaigraj na najunikatnijem GTA 5 roleplay serveru. Klikom na dugme ispod saznaj kako se pridružiti serveru.</p>
+                                <div class="mb-16 lg:mb-0">
+                                    <a class="inline-block px-5 py-3 text-xl leading-normal text-center text-gray-800 bg-gray-100 border border-gray-100 rounded-md hover:transition-all hover:ease-in hover:text-white hover:bg-nteam hover:ring-0 hover:border-nteam focus:bg-nteam focus:border-nteam focus:outline-none focus:ring-0 ltr:mr-6 rtl:ml-6 animate__animated animate__pulse animate__infinite"
+                                        href="#howtostart">
+Saznaj više
+</a>
+                                    <div class="absolute flex justify-center mt-8 slider-dots">
+                                        <span class="active" onclick="if (!window.__cfRLUnblockHandlers) return false; slider(0)" id="slider-0" data-cf-modified-9657d428943c0c1e93f94a57-=""></span>
+                                        <span class="" onclick="if (!window.__cfRLUnblockHandlers) return false; slider(1)" id="slider-1" data-cf-modified-9657d428943c0c1e93f94a57-=""></span>
+                                        <span class="" onclick="if (!window.__cfRLUnblockHandlers) return false; slider(2)" id="slider-2" data-cf-modified-9657d428943c0c1e93f94a57-=""></span>
+                                        <span class="" onclick="if (!window.__cfRLUnblockHandlers) return false; slider(3)" id="slider-3" data-cf-modified-9657d428943c0c1e93f94a57-=""></span>
+                                        <span class="" onclick="if (!window.__cfRLUnblockHandlers) return false; slider(4)" id="slider-4" data-cf-modified-9657d428943c0c1e93f94a57-=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-shrink w-full max-w-full lg:w-1/2 xl:mr-auto">
+                            <img src="./src/img/gta-3.png" class="transition-all ease-in" id="heroSlika" alt="Gta 5 character" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+    <section id="features">
+        <div class="container px-2 mx-auto xl:max-w-7xl">
+            <span class="text-xs font-bold uppercase font-poppins text-nPeriwinkle md:text-sm lg:text-sm">Funkcionalnosti
+skripte</span>
+            <h1 class="text-xl font-bold text-white md:text-4xl lg:text-4xl">Custom mape, whitelista, <br>vrhunski roleplay i <span style="color: #D0E1F9;">drugo.</span></h1>
+            <span class="flex linija" style="width: 40%;"></span>
+            <div class="grid grid-cols-1 grid-rows-1 gap-6 pt-2 mt-8 sm:grid-rows-1 md:grid-cols-3 md:grid-rows-1">
+
+                <div class="block bg-white border-l-8 rounded-lg shadow-2xl cursor-pointer cardfeature border-nteam md:w-90">
+                    <img src="./src/img/features/launcher.png" id="featureImage" class="w-full rounded-tr-lg" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam" id="featureTitle">Custom
+Launcher</span>
+                    <span class="flex ml-4 text-xs uppercase text-nteam opacity-70" id="featureShort">▪ Vrhunski dizajn
+sa client side anticheatom</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="mt-6 mb-4 ml-4 font-bold text-nteam text-md" id="featureDescription"><i class="fas fa-shield-alt"></i> Nakon što prođete našu whitelistu dobiti ćete link za preuzimanje launchera. <br>Launcher čini na server dodatno zaštićenim od čitera i time Vam pruža ugodniju igru..</p>
+                </div>
+
+                <div class="hidden bg-white border-l-8 rounded-lg shadow-2xl cursor-pointer cardfeature border-nteam md:w-90 md:block">
+                    <img src="./src/img/features/biznis.png" class="w-full rounded-tr-lg" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam">User Control Panel</span>
+                    <span class="flex ml-4 text-xs uppercase text-nteam opacity-70">▪ Kontrolišite vašeg karaktera putem
+UCP-a</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="mt-6 mb-4 ml-4 font-bold text-nteam text-md"><i class="fas fa-user-edit"></i> Kontrolišite Vašeg in game karaktera i pratite in game novosti putem UCP-a. <br>Naš UCP Vam nudi dosta funkcija koje bi Vam mogle pomoi pri igri na samom serveru..</p>
+                </div>
+
+                <div class="hidden bg-white border-l-8 rounded-lg shadow-2xl cursor-pointer cardfeature border-nteam md:w-90 md:block">
+                    <img src="./src/img/features/namjestaj.png" class="w-full rounded-tr-lg" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam">Web Shop</span>
+                    <span class="flex ml-4 text-xs uppercase text-nteam opacity-70"> Brza i sigurna kupovina in game
+itema</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="mt-6 mb-4 ml-4 font-bold text-nteam text-md"><i class="fas fa-shopping-cart"></i> Putem našeg Web Shopa možete obaviti kupovinu raznih in game pogodnosti, bilo da je to VIP, Priority za Queue ili neko vozilo.<br> Sve to možete obaviti veoma brzo putem našeg shopa..</p>
+                </div>
+                <div class="hidden md:block"></div>
+                <div class="flex justify-center gap-6 text-center md:hidden">
+                    <i class="text-white opacity-50 cursor-pointer fas fa-arrow-circle-left hover:text-nPeriwinkle hover:transition-all hover:ease-in" style="width: 50px; height:50;" onclick="if (!window.__cfRLUnblockHandlers) return false; featureSlider(0)" data-cf-modified-9657d428943c0c1e93f94a57-=""></i>
+                    <i class="text-white opacity-50 cursor-pointer fas fa-arrow-circle-right hover:text-nPeriwinkle hover:transition-all hover:ease-in" style="width: 50px; height:50;" onclick="if (!window.__cfRLUnblockHandlers) return false; featureSlider(1)" data-cf-modified-9657d428943c0c1e93f94a57-=""></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="howtostart" style="margin-top: 10%;">
+        <img src="./src/img/play.png" class="absolute hidden w-64 mt-40 lg:block xl:w-64 xxl:w-96 animacijaKaraktera" alt="">
+        <div class="container px-2 mx-auto xl:max-w-7xl">
+            <span class="text-xs font-bold uppercase font-poppins text-nPeriwinkle md:text-sm lg:text-sm">Započnite sa
+igrom</span>
+            <h1 class="text-xl font-bold text-white md:text-4xl lg:text-4xl">Kako započeti <span style="color: #D0E1F9;">igru?</span></h1>
+            <span class="flex linija" style="width: 40%;"></span>
+            <p class="mt-3 text-xs font-bold text-white md:text-lg">NTeam Roleplay je <span style="color: #D0E1F9;">next-level</span> GTA 5 Roleplaya.<br> Zaigrajte kao pripadnik bande, postanite pripadnik policije, zaposlite se kao bolniar...<br>Osjetite nevjerovatnu atmosferu <span style="color: #D0E1F9;">Roleplay svijeta</span>                sa svim čarima GTA 5 igre.
+            </p>
+            <div class="grid grid-rows-2 gap-6 pt-2 mt-8 md:grid-rows-1 md:grid-cols-3">
+
+                <div class="bg-white rounded-lg shadow-2xl">
+                    <img src="./src/img/features/download.jpg" id="featureImage" class="w-full" style="border-top-right-radius: 8px; border-top-left-radius: 8px;" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam" id="featureTitle">Kupite GTA
+5</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="px-10 mt-6 mb-4 ml-4 font-bold text-nteam text-md" id="featureDescription"><i class="fas fa-hand-paper"></i> Da bi zaigrali na naem serveru potreban Vam je officialni GTA 5 nalog, kupovinu možete izvršiti klikom <a href="#" class="underline cursor-pointer">ovdje</a>.</p>
+                    <a href="https://www.instant-gaming.com/?igr=nteamrp" target="_blank" class="flex justify-center w-full py-3 mr-4 text-2xl font-bold text-white cursor-pointer bg-nteam hover:bg-nBackground hover:text-white hover:transition-all hover:ease-in" style="border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;"><i class="mt-1 fas fa-shopping-cart" style="padding-right: 2%;"></i> Kupi</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-2xl">
+                    <img src="./src/img/features/launcher.jpg" id="featureImage" class="w-full" style="border-top-right-radius: 8px; border-top-left-radius: 8px;" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam" id="featureTitle">Preuzmite
+FiveM</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="px-10 mt-6 mb-4 ml-4 font-bold text-nteam text-md" id="featureDescription"><i class="fas fa-cloud-arrow-down"></i> Da bi igrali GTA 5 na našem serveru morate imati preuzet FiveM klijent, možete ga preuzeti klikom <a href="#" class="underline cursor-pointer">ovdje</a>.</p>
+                    <a href="https://fivem.net/" target="_blank" class="flex justify-center w-full py-3 mr-4 text-2xl font-bold text-white cursor-pointer bg-nteam hover:bg-nBackground hover:text-white hover:transition-all hover:ease-in" style="border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;"><i class="mt-1 fas fa-download" style="padding-right: 2%;"></i> Preuzmi</a>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-2xl">
+                    <img src="./src/img/features/whitelist.jpg" id="featureImage" class="w-full" style="border-top-right-radius: 8px; border-top-left-radius: 8px;" alt="How launcher looks like on NTeam Roleplay">
+                    <span class="flex justify-center mt-3 text-xl font-bold text-nteam" id="featureTitle">Zaponite
+whitelistu</span>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="px-10 mt-6 mb-4 ml-4 font-bold text-nteam text-md" id="featureDescription"><i class="fas fa-file-export"></i> Whitelista je tu da svi igrači prije ulaska budu provjereni putem raznih Roleplay testova, pokrenite <a href="#" class="underline cursor-pointer">whitelistu</a>.</p>
+                    <a href="panel/login" class="flex justify-center w-full py-3 mr-4 text-2xl font-bold text-white cursor-pointer bg-nteam hover:bg-nBackground hover:text-white hover:transition-all hover:ease-in" style="border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;"><i class="mt-1 fas fa-arrow-right-from-bracket" style="padding-right: 2%;"></i> Ispuni
+whitelistu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social sm:bg-none0" id="social">
+        <div class="container px-2 mx-auto xl:max-w-7xl">
+            <div class="grid gap-6 pt-2 mt-8 lg:grid-cols-3 lg:gap-0">
+                <div class="xs:order-2 sm:order-2 md:order-2 lg:order-1 xl:order-1">
+                    <div class="flex items-center p-6 mt-0 bg-white rounded-lg shadow-2xl sm:w-full lg:mt-48 md:w-96 lg:w-80 xl:w-96 md:mx-auto">
+                        <div class="social_icon"><i class="fab fa-facebook text-nteam" style="height: 40px; width: 40px;"></i></div>
+                        <p class="pl-6 font-bold text-nBackground">Facebook Stranica</p>
+                        <a href="https://www.facebook.com/--" target="_blank" class="text-white bg-gradient-to-r cursor-pointer from-nteam to-nBackground hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 mb-2 sm:ml-24 lg:ml-0 xl:ml-14">Posjeti</a>
+                    </div>
+                    <div class="flex items-center p-6 mt-0 bg-white rounded-lg shadow-2xl lg:mt-32 xs:w-full xs:mt-5 md:w-96 lg:w-80 xl:w-96 md:mx-auto">
+                        <div class="social_icon"><i class="text-red-500 fab fa-youtube" style="height: 40px; width: 40px;"></i></div>
+                        <p class="pl-6 font-bold text-nBackground">YouTube Kanal</p>
+                        <a href="https://www.youtube.com/c/--" target="_blank" class="text-white bg-gradient-to-r cursor-pointer from-nteam to-nBackground hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 mb-2 sm:ml-24 lg:ml-0 xl:ml-14">Posjeti</a>
+                    </div>
+                </div>
+                <div class="xs:order-1 sm:order-1 md:order-1 lg:order-2 xl:order-2">
+                    <h2 class="flex justify-center text-3xl font-poppins text-nPeriwinkle md:text-3xl lg:text-4xl">
+                        Društvene mreže</h2>
+                    <span class="flex ml-4 linija"></span>
+                    <p class="flex justify-center text-xs text-white font-poppins md:text-md lg:text-md">Zapratite nas da bi bili u toku sa projektom!</p>
+                </div>
+                <div class="xs:order-3 sm:order-3 md:order-3 lg:order-3 xl:order-3 md:w-96 md:mx-auto">
+                    <div class="flex items-center p-6 mt-0 bg-white rounded-lg shadow-2xl ml-14 lg:mt-48 xs:mt-0 xs:ml-0 lg:ml-0 xs:w-full md:w-96 lg:w-80 xl:w-96 ">
+                        <div class="social_icon"><i class="fab fa-discord text-nteam" style="height: 40px; width: 40px;"></i></div>
+                        <p class="pl-6 font-bold text-nBackground">Discord Server</p>
+                        <a href="https://discord.gg/fiveleaks" target="_blank" class="text-white bg-gradient-to-r cursor-pointer from-nteam to-nBackground hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 mb-2 sm:ml-24 lg:ml-0 xl:ml-14">Posjeti</a>
+                    </div>
+                    <div class="flex items-center p-6 mt-0 bg-white rounded-lg shadow-2xl ml-14 lg:mt-32 xs:ml-0 lg:ml-0 xs:w-full md:w-96 lg:w-80 xl:w-96 xs:mt-5">
+                        <div class="social_icon"><i class="text-red-500 fab fa-instagram" style="height: 40px; width: 40px;"></i></div>
+                        <p class="pl-6 font-bold text-nBackground">Instagram stranica</p>
+                        <a href="https://instagram.com/--" target="_blank" class="text-white bg-gradient-to-r cursor-pointer from-nteam to-nBackground hover:bg-gradient-to-br focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 mb-2 sm:ml-24 lg:ml-0 xl:ml-14">Posjeti</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white dark:bg-gray-800">
+        <div class="container px-6 py-4 mx-auto">
+            <div class="mt-4 lg:flex">
+                <div class="w-full -mx-6 lg:w-2/5">
+                    <div class="px-6">
+                        <div>
+                            <img src="src/img/logo.png" class="inline-flex" height="100" width="100" alt="NTeam Logo">
+                            <a href="#" class="text-sm font-bold text-gray-800 dark:text-white hover:text-gray-700 dark:hover:text-gray-300 sm:text-xl">
+NTeam
+Roleplay</a>
+                        </div>
+                        <p class="max-w-md mt-2 text-gray-500 dark:text-gray-400">Pridružite se najvećoj Roleplay zajednici na GTA 5 platformi, ispunite prijavu za <a class="text-white underline decoration-solid" href="#">whitelistu</a>.
+                        </p>
+                        <div class="flex mt-4 -mx-2">
+                            <a href="#" class="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" aria-label="YouTube">
+<i class="fab fa-youtube"></i>
+</a>
+                            <a href="#" class="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" aria-label="Facebook">
+<i class="fab fa-facebook-square"></i>
+</a>
+                            <a href="#" class="mx-2 text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400" aria-label="Instagram">
+<i class="fab fa-instagram"></i>
+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 lg:mt-0 lg:flex-1">
+                    <div class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
+                        <div>
+                            <h3 class="text-gray-700 uppercase dark:text-white">O nama</h3>
+                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Pravila
+Servera</a>
+                            <a href="https://discord.gg/fiveleaks" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Discord
+Server</a>
+                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Trailer
+Servera</a>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-700 uppercase dark:text-white">Društvene Mreže</h3>
+                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Facebook</a>
+                            <a href="#" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Instagram</a>
+                            <a href="https://www.youtube.com/c/--" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">YouTube</a>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-700 uppercase dark:text-white">Korisni Linkovi</h3>
+                            <a href="./panel/login.html" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">Ispunite
+whitelistu</a>
+                            <a href="./panel/login.html" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">User
+Control Panel</a>
+                            <a href="./panel/login.html" class="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">NTeam
+Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="h-px my-6 bg-gray-300 border-none dark:bg-gray-700">
+            <div>
+                <p class="text-center text-gray-800 dark:text-white">Copyright <span class="text-nPeriwinkle">Supreme 
+1337</span> 2022 © - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <div class="absolute hidden mt-8 vslider-dots lg:flex">
+        <a href="#" class="vactive" onclick="if (!window.__cfRLUnblockHandlers) return false; vSlider(1)" id="vslider-1" data-cf-modified-9657d428943c0c1e93f94a57-=""></a>
+        <a href="#features" class="" onclick="if (!window.__cfRLUnblockHandlers) return false; vSlider(2)" id="vslider-2" data-cf-modified-9657d428943c0c1e93f94a57-=""></a>
+        <a href="#howtostart" class="" onclick="if (!window.__cfRLUnblockHandlers) return false; vSlider(3)" id="vslider-3" data-cf-modified-9657d428943c0c1e93f94a57-=""></a>
+        <a href="#social" class="" onclick="if (!window.__cfRLUnblockHandlers) return false; vSlider(4)" id="vslider-4" data-cf-modified-9657d428943c0c1e93f94a57-=""></a>
+    </div>
+    <button onclick="if (!window.__cfRLUnblockHandlers) return false; scrollToTop()" id="topButton" title="Go to top" data-cf-modified-9657d428943c0c1e93f94a57-=""><i class="fa-solid fa-arrow-up-long" style="height: 30px; width: 30px;"></i></button>
+    <div class="hidden overlay"></div>
+    <div class="hidden rounded-lg modal_window bg-gradient-to-r from-nMidnightBlue to-nBackground" id="whitelist">
+        <button class="btn_close-modal">&times;</button>
+        <img src="src/img/whitelist.png" class="w-3/6 mx-auto mb-10" alt="">
+        <h2 class="flex justify-center modal__whitelist">Da li želite započeti vanrednu whitelistu?
+        </h2>
+        <form class="modal__form" action="actions/login" method="POST">
+            <button class="text-white bg-green-500 btn hover:bg-green-700 hover:text-white hover:transition focus:ring-cyan-200">Potvrdi</button>
+            <button class="text-white bg-red-500 btn hover:bg-red-700 hover:text-white hover:transition focus:ring-cyan-200">Odustani</button>
+        </form>
+    </div>
+    <script src="js/modal.js" type="9657d428943c0c1e93f94a57-text/javascript"></script>
+    <script src="js/app.js" type="9657d428943c0c1e93f94a57-text/javascript"></script>
+    <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="9657d428943c0c1e93f94a57-|49" defer=""></script>
+    <script>
+        (function() {
+            var js = "window['__CF$cv$params']={r:'75c4ca1e3f650d56',m:'6cjAa01FE4xenjOymNIzKGYEZwuJFS1FQQfNcrK6sIY-1666132971-0-AQv15DwzJEgTumakORYiwW3bZEO2pxZVAP8ulGtrFX8LxIjvyhI+ImYQLgyv8P4OpesnGi9ONV1ZanV2fUVY4xGqkG7a8VxWE0eFHjZTftzURsgCMfrvWMerw7r5tUHrwA==',s:[0xe1a9772b8b,0xa3d33fa19d],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+            var _0xh = document.createElement('iframe');
+            _0xh.height = 1;
+            _0xh.width = 1;
+            _0xh.style.position = 'absolute';
+            _0xh.style.top = 0;
+            _0xh.style.left = 0;
+            _0xh.style.border = 'none';
+            _0xh.style.visibility = 'hidden';
+            document.body.appendChild(_0xh);
+
+            function handler() {
+                var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+                if (_0xi) {
+                    var _0xj = _0xi.createElement('script');
+                    _0xj.nonce = '';
+                    _0xj.innerHTML = js;
+                    _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+                }
+            }
+            if (document.readyState !== 'loading') {
+                handler();
+            } else if (window.addEventListener) {
+                document.addEventListener('DOMContentLoaded', handler);
+            } else {
+                var prev = document.onreadystatechange || function() {};
+                document.onreadystatechange = function(e) {
+                    prev(e);
+                    if (document.readyState !== 'loading') {
+                        document.onreadystatechange = prev;
+                        handler();
+                    }
+                };
+            }
+        })();
+    </script>
+</body>
+
+</html>
